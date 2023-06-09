@@ -6,31 +6,52 @@
 **/
 
 /*
- * Current Version 0.2a
+ * Current Version 0.2b
  * Code Revision History :
  * 		0.0	: Nothing is working, even light up a LED is not working
  * 		0.1a	: The LED strip is working using TIMER TIM 2, TIM1 is broken
  * 		0.1b	: Adding brightness feature, still a bit broken
  * 		0.2a	: Adding PixelArt Lib
+ * 		0.2b	: Adding Pixils + Animation
 */
+
+/*
+ * TODO :
+ *			Use Structure passing pointers avoid, RAM usage as much as possible, use 1 bit instead (3r 3g 2b)
+ *			Make the documentation and maintain it
+ *			fix scallFactor
+ *			Try to implement a simple way to create characters
+ *
+ *
+ *			Character to LEDS !!
+ *			Rainbow to LCD
+ *			How to upscale the chararcter to a 16*16 grid ?
+ */
+
+/*
+ * RAM and ROM USAGE :
+ * 		Rev 0.2b : Rainbow 64 Leds + Screen
+ * 			-> RAM : 5.66kb : 28.32%
+ * 			-> ROM : 35.06kb : 27.39%
+ */
+
 
 #include "main.h"
 #include "init.h"
 #include "ws2812.h"
 
+#include "Pixils.h"
 #include "PixelArt.h"
 
-// Da main function boy
+// Main Function
 int main(void)
 {
 	Init_All();
 	PixelArt_InitScreen();
 
-	PixelArt_ScreenTest();
-	PixelArt_DrawGrid(B, W, 16, 1);
-
 	while(1) {
-
+		Effect_Rainbow();
+		PixelArt_AnimeCharacter(Wizard, 24, 1, 0);
 
 	}
 }
