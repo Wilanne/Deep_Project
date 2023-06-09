@@ -6,28 +6,31 @@
 **/
 
 /*
- * Current Version 0.1b
+ * Current Version 0.2a
  * Code Revision History :
  * 		0.0	: Nothing is working, even light up a LED is not working
  * 		0.1a	: The LED strip is working using TIMER TIM 2, TIM1 is broken
- * 		0.1b	: Adding Screen Lib + Font
- */
+ * 		0.1b	: Adding brightness feature, still a bit broken
+ * 		0.2a	: Adding PixelArt Lib
+*/
 
 #include "main.h"
 #include "init.h"
 #include "ws2812.h"
-#include "ILI9341_GFX.h"
-#include "ILI9341_STM32_DRIVER.h"
+
+#include "PixelArt.h"
 
 // Da main function boy
 int main(void)
 {
 	Init_All();
+	PixelArt_InitScreen();
 
-	ILI9341_Init();
-	ILI9341_FillScreen(W);
+	PixelArt_ScreenTest();
+	PixelArt_DrawGrid(B, W, 16, 1);
 
 	while(1) {
+
 
 	}
 }
