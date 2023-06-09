@@ -6,26 +6,28 @@
 **/
 
 /*
- * Current Version 0.2b
+ * Current Version 0.1b
  * Code Revision History :
- * 		0.0		: Nothing is working, even light up a LED is not working
+ * 		0.0	: Nothing is working, even light up a LED is not working
  * 		0.1a	: The LED strip is working using TIMER TIM 2, TIM1 is broken
-*/
+ * 		0.1b	: Adding Screen Lib + Font
+ */
 
 #include "main.h"
 #include "init.h"
 #include "ws2812.h"
+#include "ILI9341_GFX.h"
+#include "ILI9341_STM32_DRIVER.h"
 
-// Main Function
+// Da main function boy
 int main(void)
 {
 	Init_All();
 
-	while(1) {
+	ILI9341_Init();
+	ILI9341_FillScreen(W);
 
-		Set_LED(0, 0, 255, 0);
-		WS2812_Send();
-		HAL_Delay(2000);
+	while(1) {
 
 	}
 }
