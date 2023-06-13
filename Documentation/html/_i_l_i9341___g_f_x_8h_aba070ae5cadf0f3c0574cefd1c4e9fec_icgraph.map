@@ -1,0 +1,4 @@
+<map id="ILI9341_DrawText" name="ILI9341_DrawText">
+<area shape="rect" id="node1" title="Draws a text string on the ILI9341 display." alt="" coords="194,5,317,32"/>
+<area shape="rect" id="node2" href="$_pixel_art_8c.html#ad8f2bda4936099d7883d5fb888fb44ad" title="Perform a screen test by filling the screen with a color and displaying text." alt="" coords="5,5,146,32"/>
+</map>

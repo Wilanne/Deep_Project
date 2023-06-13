@@ -1,0 +1,43 @@
+\hypertarget{ws2812_8h_source}{}\doxysection{ws2812.\+h}
+\label{ws2812_8h_source}\index{Core/Inc/ws2812.h@{Core/Inc/ws2812.h}}
+\mbox{\hyperlink{ws2812_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{ws2812_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{ws2812_8h_source_l00008}00008\ \textcolor{preprocessor}{\#ifndef\ SRC\_WS2812\_H\_}}
+\DoxyCodeLine{\Hypertarget{ws2812_8h_source_l00009}00009\ \textcolor{preprocessor}{\#define\ SRC\_WS2812\_H\_}}
+\DoxyCodeLine{\Hypertarget{ws2812_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{ws2812_8h_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}stm32f1xx\_hal.h"{}}}
+\DoxyCodeLine{\Hypertarget{ws2812_8h_source_l00012}00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{init_8h}{init.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{ws2812_8h_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{ws2812_8h_source_l00014}\mbox{\hyperlink{ws2812_8h_a73f7eec19bbf7b2b9199b8ff277bc980}{00014}}\ \textcolor{preprocessor}{\#define\ MAX\_LED\ 5\ }}
+\DoxyCodeLine{\Hypertarget{ws2812_8h_source_l00015}\mbox{\hyperlink{ws2812_8h_aa01a19b11b7371ca336b668d2b540e93}{00015}}\ \textcolor{preprocessor}{\#define\ USE\_BRIGHTNESS\ 0\ }}
+\DoxyCodeLine{\Hypertarget{ws2812_8h_source_l00016}\mbox{\hyperlink{ws2812_8h_a3fa4f5a545e7b55746d698b59c8dba5b}{00016}}\ \textcolor{preprocessor}{\#define\ RAINBOW\_STEP\ 16\ }}
+\DoxyCodeLine{\Hypertarget{ws2812_8h_source_l00017}\mbox{\hyperlink{ws2812_8h_a598a3330b3c21701223ee0ca14316eca}{00017}}\ \textcolor{preprocessor}{\#define\ PI\ 3.14159265\ }}
+\DoxyCodeLine{\Hypertarget{ws2812_8h_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{ws2812_8h_source_l00023}\mbox{\hyperlink{struct_r_g_b__color__t}{00023}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\Hypertarget{ws2812_8h_source_l00024}\mbox{\hyperlink{struct_r_g_b__color__t_a860c0e35189a05c861dcfaf00f8051f3}{00024}}\ uint8\_t\ \mbox{\hyperlink{struct_r_g_b__color__t_a860c0e35189a05c861dcfaf00f8051f3}{count}};\ }
+\DoxyCodeLine{\Hypertarget{ws2812_8h_source_l00025}\mbox{\hyperlink{struct_r_g_b__color__t_a86b4b7f3a3171987b89f7f85e1d3c037}{00025}}\ uint8\_t\ \mbox{\hyperlink{struct_r_g_b__color__t_a86b4b7f3a3171987b89f7f85e1d3c037}{red}};\ }
+\DoxyCodeLine{\Hypertarget{ws2812_8h_source_l00026}\mbox{\hyperlink{struct_r_g_b__color__t_ada2349630f10ed23b455beb4c68e4650}{00026}}\ uint8\_t\ \mbox{\hyperlink{struct_r_g_b__color__t_ada2349630f10ed23b455beb4c68e4650}{green}};\ }
+\DoxyCodeLine{\Hypertarget{ws2812_8h_source_l00027}\mbox{\hyperlink{struct_r_g_b__color__t_a8385ba26469d719c031a8ac9d130be41}{00027}}\ uint8\_t\ \mbox{\hyperlink{struct_r_g_b__color__t_a8385ba26469d719c031a8ac9d130be41}{blue}};\ }
+\DoxyCodeLine{\Hypertarget{ws2812_8h_source_l00028}00028\ \}\ \mbox{\hyperlink{struct_r_g_b__color__t}{RGB\_color\_t}};}
+\DoxyCodeLine{\Hypertarget{ws2812_8h_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{ws2812_8h_source_l00030}00030\ \textcolor{comment}{//\ LED\ buffer}}
+\DoxyCodeLine{\Hypertarget{ws2812_8h_source_l00031}\mbox{\hyperlink{ws2812_8h_a5ea7e5d31711bd4cbe5cec18527015cb}{00031}}\ \textcolor{keyword}{static}\ \mbox{\hyperlink{struct_r_g_b__color__t}{RGB\_color\_t}}\ \mbox{\hyperlink{ws2812_8h_a5ea7e5d31711bd4cbe5cec18527015cb}{LED\_Data}}[\mbox{\hyperlink{ws2812_8h_a73f7eec19bbf7b2b9199b8ff277bc980}{MAX\_LED}}];\ }
+\DoxyCodeLine{\Hypertarget{ws2812_8h_source_l00032}\mbox{\hyperlink{ws2812_8h_aa78e8f96ca702ac160c3e777c0b67e07}{00032}}\ \textcolor{keyword}{static}\ \mbox{\hyperlink{struct_r_g_b__color__t}{RGB\_color\_t}}\ \mbox{\hyperlink{ws2812_8h_aa78e8f96ca702ac160c3e777c0b67e07}{LED\_Mod}}[\mbox{\hyperlink{ws2812_8h_a73f7eec19bbf7b2b9199b8ff277bc980}{MAX\_LED}}];\ }
+\DoxyCodeLine{\Hypertarget{ws2812_8h_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{ws2812_8h_source_l00034}\mbox{\hyperlink{ws2812_8h_a8d73a991ec74fa638c920d3439421b02}{00034}}\ \textcolor{keyword}{static}\ uint16\_t\ \mbox{\hyperlink{ws2812_8h_a8d73a991ec74fa638c920d3439421b02}{pwmData}}[(24*\mbox{\hyperlink{ws2812_8h_a73f7eec19bbf7b2b9199b8ff277bc980}{MAX\_LED}})+50];\ }
+\DoxyCodeLine{\Hypertarget{ws2812_8h_source_l00035}\mbox{\hyperlink{ws2812_8h_a4f968481ec4571ce2675eae2e4475136}{00035}}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{ws2812_8h_a4f968481ec4571ce2675eae2e4475136}{datasentflag}}\ =\ 0;\ }
+\DoxyCodeLine{\Hypertarget{ws2812_8h_source_l00036}\mbox{\hyperlink{ws2812_8h_ad56d1be63a043ca673755eefc32b3933}{00036}}\ \textcolor{keyword}{static}\ uint8\_t\ \mbox{\hyperlink{ws2812_8h_ad56d1be63a043ca673755eefc32b3933}{rainbow\_index}}\ =\ 0;\ }
+\DoxyCodeLine{\Hypertarget{ws2812_8h_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{ws2812_8h_source_l00038}00038\ \textcolor{comment}{//\ Essential\ Prototypes}}
+\DoxyCodeLine{\Hypertarget{ws2812_8h_source_l00039}00039\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ws2812_8h_a07e5fc4d223b16bec2fd6bed547cf91d}{HAL\_TIM\_PWM\_PulseFinishedCallback}}(TIM\_HandleTypeDef\ *htim);}
+\DoxyCodeLine{\Hypertarget{ws2812_8h_source_l00040}00040\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ws2812_8h_a8d6329b804987f3dde157bcf7c6c6640}{Set\_LED}}\ (\textcolor{keywordtype}{int}\ LEDnum,\ \textcolor{keywordtype}{int}\ Red,\ \textcolor{keywordtype}{int}\ Green,\ \textcolor{keywordtype}{int}\ Blue);}
+\DoxyCodeLine{\Hypertarget{ws2812_8h_source_l00041}00041\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ws2812_8h_af4afcf37584b66e28753eab349ade16c}{Set\_Brightness}}\ (\textcolor{keywordtype}{int}\ brightness);}
+\DoxyCodeLine{\Hypertarget{ws2812_8h_source_l00042}00042\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ws2812_8h_a6be227c85ae79c14a68e2358161fd3ea}{WS2812\_Send}}\ (\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{ws2812_8h_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{ws2812_8h_source_l00044}00044\ \textcolor{comment}{//\ Effects\ Prototypes}}
+\DoxyCodeLine{\Hypertarget{ws2812_8h_source_l00045}00045\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ws2812_8h_a6d32a890a085c5c29c1efb3edfb7f617}{Effect\_Rainbow}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{ws2812_8h_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{ws2812_8h_source_l00047}00047\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ SRC\_WS2812\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

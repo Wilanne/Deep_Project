@@ -1,16 +1,18 @@
-/*
- * init.c
+/**
+ * @file init.c
  *
- *  Created on: 2 mai 2023
- *      Author: leoau
+ * @brief This file the function to init all the hardware component
+ *
+ * @date 11 mai 2023
+ * @author leoau
  */
 
 #include "init.h"
 
 /**
-  * @brief System Clock Configuration
-  * @retval None
-  */
+ * @brief Configures the system clock.
+ * @retval None
+ */
 void SystemClock_Config(void)
 {
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
@@ -229,6 +231,10 @@ static void MX_TIM2_Init(void)
 
 }
 
+/**
+ * @brief Initializes all the peripherals.
+ * @retval None
+ */
 void Init_All(void) {
 	  HAL_Init();
 	  SystemClock_Config();

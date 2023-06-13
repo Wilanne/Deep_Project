@@ -28,14 +28,6 @@
  *			How to upscale the chararcter to a 16*16 grid ?
  */
 
-/*
- * RAM and ROM USAGE :
- * 		Rev 0.2b : Rainbow 64 Leds + Screen
- * 			-> RAM : 5.66kb : 28.32%
- * 			-> ROM : 35.06kb : 27.39%
- */
-
-
 #include "main.h"
 #include "init.h"
 #include "ws2812.h"
@@ -50,13 +42,12 @@ int main(void)
 	PixelArt_InitScreen();
 
 	while(1) {
-		Effect_Rainbow();
+		//Effect_Rainbow();
 		PixelArt_AnimeCharacter(Wizard, 24, 1, 0);
 
 	}
 }
 
-// keske c ksa
 void Error_Handler(void)
 {
   /* USER CODE BEGIN Error_Handler_Debug */

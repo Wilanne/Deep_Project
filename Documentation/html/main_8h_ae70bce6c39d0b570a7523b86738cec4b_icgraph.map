@@ -1,0 +1,6 @@
+<map id="HAL_TIM_MspPostInit" name="HAL_TIM_MspPostInit">
+<area shape="rect" id="node1" title=" " alt="" coords="357,5,508,32"/>
+<area shape="rect" id="node2" href="$init_8c.html#af952250b2d49718b385e14a76fa7c1b8" title="TIM2 Initialization Function." alt="" coords="211,5,309,32"/>
+<area shape="rect" id="node3" href="$init_8c.html#a36e79ff7499abd825fd771905e0d8b89" title="Initializes all the peripherals." alt="" coords="103,5,163,32"/>
+<area shape="rect" id="node4" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,5,55,32"/>
+</map>

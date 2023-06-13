@@ -1,0 +1,257 @@
+\hypertarget{stm32f1xx__hal__msp_8c_source}{}\doxysection{stm32f1xx\+\_\+hal\+\_\+msp.\+c}
+\label{stm32f1xx__hal__msp_8c_source}\index{Core/Src/stm32f1xx\_hal\_msp.c@{Core/Src/stm32f1xx\_hal\_msp.c}}
+\mbox{\hyperlink{stm32f1xx__hal__msp_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00001}00001\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ Header\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00020}00020\ \textcolor{comment}{/*\ USER\ CODE\ END\ Header\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00022}00022\ \textcolor{comment}{/*\ Includes\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00023}00023\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{main_8h}{main.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00024}00024\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ Includes\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00026}00026\ \textcolor{comment}{/*\ USER\ CODE\ END\ Includes\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00027}00027\ \textcolor{keyword}{extern}\ DMA\_HandleTypeDef\ \mbox{\hyperlink{stm32f1xx__hal__msp_8c_ac8cdcfbb7adfcccc5717da58e1e10ae4}{hdma\_spi1\_tx}};}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00029}00029\ \textcolor{keyword}{extern}\ DMA\_HandleTypeDef\ \mbox{\hyperlink{stm32f1xx__hal__msp_8c_ab051b95fbef5ff0c90c0782a26ab85ba}{hdma\_tim2\_ch1}};}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00031}00031\ \textcolor{comment}{/*\ Private\ typedef\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00032}00032\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ TD\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00034}00034\ \textcolor{comment}{/*\ USER\ CODE\ END\ TD\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00036}00036\ \textcolor{comment}{/*\ Private\ define\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00037}00037\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ Define\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00039}00039\ \textcolor{comment}{/*\ USER\ CODE\ END\ Define\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00041}00041\ \textcolor{comment}{/*\ Private\ macro\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00042}00042\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ Macro\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00044}00044\ \textcolor{comment}{/*\ USER\ CODE\ END\ Macro\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00046}00046\ \textcolor{comment}{/*\ Private\ variables\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00047}00047\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ PV\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00049}00049\ \textcolor{comment}{/*\ USER\ CODE\ END\ PV\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00051}00051\ \textcolor{comment}{/*\ Private\ function\ prototypes\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00052}00052\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ PFP\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00054}00054\ \textcolor{comment}{/*\ USER\ CODE\ END\ PFP\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00056}00056\ \textcolor{comment}{/*\ External\ functions\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00057}00057\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ ExternalFunctions\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00059}00059\ \textcolor{comment}{/*\ USER\ CODE\ END\ ExternalFunctions\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00061}00061\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ 0\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00063}00063\ \textcolor{comment}{/*\ USER\ CODE\ END\ 0\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00065}00065\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{stm32f1xx__hal__msp_8c_ae70bce6c39d0b570a7523b86738cec4b}{HAL\_TIM\_MspPostInit}}(TIM\_HandleTypeDef\ *htim);}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00069}\mbox{\hyperlink{stm32f1xx__hal__msp_8c_ae4fb8e66865c87d0ebab74a726a6891f}{00069}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{stm32f1xx__hal__msp_8c_ae4fb8e66865c87d0ebab74a726a6891f}{HAL\_MspInit}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00070}00070\ \{}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00071}00071\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ MspInit\ 0\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00073}00073\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ MspInit\ 0\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00075}00075\ \ \ \_\_HAL\_RCC\_AFIO\_CLK\_ENABLE();}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00076}00076\ \ \ \_\_HAL\_RCC\_PWR\_CLK\_ENABLE();}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00078}00078\ \ \ \textcolor{comment}{/*\ System\ interrupt\ init*/}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00082}00082\ \ \ \_\_HAL\_AFIO\_REMAP\_SWJ\_NOJTAG();}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00084}00084\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ MspInit\ 1\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00086}00086\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ MspInit\ 1\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00087}00087\ \}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00095}\mbox{\hyperlink{stm32f1xx__hal__msp_8c_a17f583be14b22caffa6c4e56dcd035ef}{00095}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{stm32f1xx__hal__msp_8c_a17f583be14b22caffa6c4e56dcd035ef}{HAL\_SPI\_MspInit}}(SPI\_HandleTypeDef*\ hspi)}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00096}00096\ \{}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00097}00097\ \ \ GPIO\_InitTypeDef\ GPIO\_InitStruct\ =\ \{0\};}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00098}00098\ \ \ \textcolor{keywordflow}{if}(hspi-\/>Instance==SPI1)}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00099}00099\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00100}00100\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ SPI1\_MspInit\ 0\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00102}00102\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ SPI1\_MspInit\ 0\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00103}00103\ \ \ \ \ \textcolor{comment}{/*\ Peripheral\ clock\ enable\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00104}00104\ \ \ \ \ \_\_HAL\_RCC\_SPI1\_CLK\_ENABLE();}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00105}00105\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00106}00106\ \ \ \ \ \_\_HAL\_RCC\_GPIOB\_CLK\_ENABLE();}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00111}00111\ \ \ \ \ GPIO\_InitStruct.Pin\ =\ GPIO\_PIN\_3|GPIO\_PIN\_5;}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00112}00112\ \ \ \ \ GPIO\_InitStruct.Mode\ =\ GPIO\_MODE\_AF\_PP;}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00113}00113\ \ \ \ \ GPIO\_InitStruct.Speed\ =\ GPIO\_SPEED\_FREQ\_HIGH;}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00114}00114\ \ \ \ \ HAL\_GPIO\_Init(GPIOB,\ \&GPIO\_InitStruct);}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00115}00115\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00116}00116\ \ \ \ \ \_\_HAL\_AFIO\_REMAP\_SPI1\_ENABLE();}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00117}00117\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00118}00118\ \ \ \ \ \textcolor{comment}{/*\ SPI1\ DMA\ Init\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00119}00119\ \ \ \ \ \textcolor{comment}{/*\ SPI1\_TX\ Init\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00120}00120\ \ \ \ \ \mbox{\hyperlink{stm32f1xx__hal__msp_8c_ac8cdcfbb7adfcccc5717da58e1e10ae4}{hdma\_spi1\_tx}}.Instance\ =\ DMA1\_Channel3;}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00121}00121\ \ \ \ \ \mbox{\hyperlink{stm32f1xx__hal__msp_8c_ac8cdcfbb7adfcccc5717da58e1e10ae4}{hdma\_spi1\_tx}}.Init.Direction\ =\ DMA\_MEMORY\_TO\_PERIPH;}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00122}00122\ \ \ \ \ \mbox{\hyperlink{stm32f1xx__hal__msp_8c_ac8cdcfbb7adfcccc5717da58e1e10ae4}{hdma\_spi1\_tx}}.Init.PeriphInc\ =\ DMA\_PINC\_DISABLE;}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00123}00123\ \ \ \ \ \mbox{\hyperlink{stm32f1xx__hal__msp_8c_ac8cdcfbb7adfcccc5717da58e1e10ae4}{hdma\_spi1\_tx}}.Init.MemInc\ =\ DMA\_MINC\_ENABLE;}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00124}00124\ \ \ \ \ \mbox{\hyperlink{stm32f1xx__hal__msp_8c_ac8cdcfbb7adfcccc5717da58e1e10ae4}{hdma\_spi1\_tx}}.Init.PeriphDataAlignment\ =\ DMA\_PDATAALIGN\_BYTE;}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00125}00125\ \ \ \ \ \mbox{\hyperlink{stm32f1xx__hal__msp_8c_ac8cdcfbb7adfcccc5717da58e1e10ae4}{hdma\_spi1\_tx}}.Init.MemDataAlignment\ =\ DMA\_MDATAALIGN\_BYTE;}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00126}00126\ \ \ \ \ \mbox{\hyperlink{stm32f1xx__hal__msp_8c_ac8cdcfbb7adfcccc5717da58e1e10ae4}{hdma\_spi1\_tx}}.Init.Mode\ =\ DMA\_NORMAL;}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00127}00127\ \ \ \ \ \mbox{\hyperlink{stm32f1xx__hal__msp_8c_ac8cdcfbb7adfcccc5717da58e1e10ae4}{hdma\_spi1\_tx}}.Init.Priority\ =\ DMA\_PRIORITY\_LOW;}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00128}00128\ \ \ \ \ \textcolor{keywordflow}{if}\ (HAL\_DMA\_Init(\&\mbox{\hyperlink{stm32f1xx__hal__msp_8c_ac8cdcfbb7adfcccc5717da58e1e10ae4}{hdma\_spi1\_tx}})\ !=\ HAL\_OK)}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00129}00129\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00130}00130\ \ \ \ \ \ \ \mbox{\hyperlink{main_8h_a1730ffe1e560465665eb47d9264826f9}{Error\_Handler}}();}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00131}00131\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00132}00132\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00133}00133\ \ \ \ \ \_\_HAL\_LINKDMA(hspi,hdmatx,\mbox{\hyperlink{stm32f1xx__hal__msp_8c_ac8cdcfbb7adfcccc5717da58e1e10ae4}{hdma\_spi1\_tx}});}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00134}00134\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00135}00135\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ SPI1\_MspInit\ 1\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00136}00136\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00137}00137\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ SPI1\_MspInit\ 1\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00138}00138\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00139}00139\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00140}00140\ \}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00141}00141\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00148}\mbox{\hyperlink{stm32f1xx__hal__msp_8c_abadc4d4974af1afd943e8d13589068e1}{00148}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{stm32f1xx__hal__msp_8c_abadc4d4974af1afd943e8d13589068e1}{HAL\_SPI\_MspDeInit}}(SPI\_HandleTypeDef*\ hspi)}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00149}00149\ \{}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00150}00150\ \ \ \textcolor{keywordflow}{if}(hspi-\/>Instance==SPI1)}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00151}00151\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00152}00152\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ SPI1\_MspDeInit\ 0\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00153}00153\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00154}00154\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ SPI1\_MspDeInit\ 0\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00155}00155\ \ \ \ \ \textcolor{comment}{/*\ Peripheral\ clock\ disable\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00156}00156\ \ \ \ \ \_\_HAL\_RCC\_SPI1\_CLK\_DISABLE();}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00157}00157\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00162}00162\ \ \ \ \ HAL\_GPIO\_DeInit(GPIOB,\ GPIO\_PIN\_3|GPIO\_PIN\_5);}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00163}00163\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00164}00164\ \ \ \ \ \textcolor{comment}{/*\ SPI1\ DMA\ DeInit\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00165}00165\ \ \ \ \ HAL\_DMA\_DeInit(hspi-\/>hdmatx);}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00166}00166\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ SPI1\_MspDeInit\ 1\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00167}00167\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00168}00168\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ SPI1\_MspDeInit\ 1\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00169}00169\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00170}00170\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00171}00171\ \}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00172}00172\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00179}\mbox{\hyperlink{stm32f1xx__hal__msp_8c_abb25ade2f7e3f7aae167bd52270c2b86}{00179}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{stm32f1xx__hal__msp_8c_abb25ade2f7e3f7aae167bd52270c2b86}{HAL\_TIM\_Base\_MspInit}}(TIM\_HandleTypeDef*\ htim\_base)}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00180}00180\ \{}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00181}00181\ \ \ \textcolor{keywordflow}{if}(htim\_base-\/>Instance==TIM2)}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00182}00182\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00183}00183\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ TIM2\_MspInit\ 0\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00184}00184\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00185}00185\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ TIM2\_MspInit\ 0\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00186}00186\ \ \ \ \ \textcolor{comment}{/*\ Peripheral\ clock\ enable\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00187}00187\ \ \ \ \ \_\_HAL\_RCC\_TIM2\_CLK\_ENABLE();}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00188}00188\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00189}00189\ \ \ \ \ \textcolor{comment}{/*\ TIM2\ DMA\ Init\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00190}00190\ \ \ \ \ \textcolor{comment}{/*\ TIM2\_CH1\ Init\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00191}00191\ \ \ \ \ \mbox{\hyperlink{stm32f1xx__hal__msp_8c_ab051b95fbef5ff0c90c0782a26ab85ba}{hdma\_tim2\_ch1}}.Instance\ =\ DMA1\_Channel5;}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00192}00192\ \ \ \ \ \mbox{\hyperlink{stm32f1xx__hal__msp_8c_ab051b95fbef5ff0c90c0782a26ab85ba}{hdma\_tim2\_ch1}}.Init.Direction\ =\ DMA\_MEMORY\_TO\_PERIPH;}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00193}00193\ \ \ \ \ \mbox{\hyperlink{stm32f1xx__hal__msp_8c_ab051b95fbef5ff0c90c0782a26ab85ba}{hdma\_tim2\_ch1}}.Init.PeriphInc\ =\ DMA\_PINC\_DISABLE;}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00194}00194\ \ \ \ \ \mbox{\hyperlink{stm32f1xx__hal__msp_8c_ab051b95fbef5ff0c90c0782a26ab85ba}{hdma\_tim2\_ch1}}.Init.MemInc\ =\ DMA\_MINC\_ENABLE;}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00195}00195\ \ \ \ \ \mbox{\hyperlink{stm32f1xx__hal__msp_8c_ab051b95fbef5ff0c90c0782a26ab85ba}{hdma\_tim2\_ch1}}.Init.PeriphDataAlignment\ =\ DMA\_PDATAALIGN\_HALFWORD;}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00196}00196\ \ \ \ \ \mbox{\hyperlink{stm32f1xx__hal__msp_8c_ab051b95fbef5ff0c90c0782a26ab85ba}{hdma\_tim2\_ch1}}.Init.MemDataAlignment\ =\ DMA\_MDATAALIGN\_HALFWORD;}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00197}00197\ \ \ \ \ \mbox{\hyperlink{stm32f1xx__hal__msp_8c_ab051b95fbef5ff0c90c0782a26ab85ba}{hdma\_tim2\_ch1}}.Init.Mode\ =\ DMA\_NORMAL;}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00198}00198\ \ \ \ \ \mbox{\hyperlink{stm32f1xx__hal__msp_8c_ab051b95fbef5ff0c90c0782a26ab85ba}{hdma\_tim2\_ch1}}.Init.Priority\ =\ DMA\_PRIORITY\_LOW;}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00199}00199\ \ \ \ \ \textcolor{keywordflow}{if}\ (HAL\_DMA\_Init(\&\mbox{\hyperlink{stm32f1xx__hal__msp_8c_ab051b95fbef5ff0c90c0782a26ab85ba}{hdma\_tim2\_ch1}})\ !=\ HAL\_OK)}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00200}00200\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00201}00201\ \ \ \ \ \ \ \mbox{\hyperlink{main_8h_a1730ffe1e560465665eb47d9264826f9}{Error\_Handler}}();}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00202}00202\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00203}00203\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00204}00204\ \ \ \ \ \_\_HAL\_LINKDMA(htim\_base,hdma[TIM\_DMA\_ID\_CC1],\mbox{\hyperlink{stm32f1xx__hal__msp_8c_ab051b95fbef5ff0c90c0782a26ab85ba}{hdma\_tim2\_ch1}});}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00205}00205\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00206}00206\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ TIM2\_MspInit\ 1\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00207}00207\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00208}00208\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ TIM2\_MspInit\ 1\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00209}00209\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00210}00210\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00211}00211\ \}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00212}00212\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00213}\mbox{\hyperlink{main_8h_ae70bce6c39d0b570a7523b86738cec4b}{00213}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{stm32f1xx__hal__msp_8c_ae70bce6c39d0b570a7523b86738cec4b}{HAL\_TIM\_MspPostInit}}(TIM\_HandleTypeDef*\ htim)}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00214}00214\ \{}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00215}00215\ \ \ GPIO\_InitTypeDef\ GPIO\_InitStruct\ =\ \{0\};}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00216}00216\ \ \ \textcolor{keywordflow}{if}(htim-\/>Instance==TIM2)}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00217}00217\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00218}00218\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ TIM2\_MspPostInit\ 0\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00219}00219\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00220}00220\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ TIM2\_MspPostInit\ 0\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00221}00221\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00222}00222\ \ \ \ \ \_\_HAL\_RCC\_GPIOA\_CLK\_ENABLE();}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00226}00226\ \ \ \ \ GPIO\_InitStruct.Pin\ =\ GPIO\_PIN\_0;}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00227}00227\ \ \ \ \ GPIO\_InitStruct.Mode\ =\ GPIO\_MODE\_AF\_PP;}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00228}00228\ \ \ \ \ GPIO\_InitStruct.Speed\ =\ GPIO\_SPEED\_FREQ\_LOW;}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00229}00229\ \ \ \ \ HAL\_GPIO\_Init(GPIOA,\ \&GPIO\_InitStruct);}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00230}00230\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00231}00231\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ TIM2\_MspPostInit\ 1\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00232}00232\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00233}00233\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ TIM2\_MspPostInit\ 1\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00234}00234\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00235}00235\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00236}00236\ \}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00243}\mbox{\hyperlink{stm32f1xx__hal__msp_8c_a555b8a2d3c7a07341f8cb1255318fa2b}{00243}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{stm32f1xx__hal__msp_8c_a555b8a2d3c7a07341f8cb1255318fa2b}{HAL\_TIM\_Base\_MspDeInit}}(TIM\_HandleTypeDef*\ htim\_base)}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00244}00244\ \{}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00245}00245\ \ \ \textcolor{keywordflow}{if}(htim\_base-\/>Instance==TIM2)}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00246}00246\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00247}00247\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ TIM2\_MspDeInit\ 0\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00248}00248\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00249}00249\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ TIM2\_MspDeInit\ 0\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00250}00250\ \ \ \ \ \textcolor{comment}{/*\ Peripheral\ clock\ disable\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00251}00251\ \ \ \ \ \_\_HAL\_RCC\_TIM2\_CLK\_DISABLE();}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00252}00252\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00253}00253\ \ \ \ \ \textcolor{comment}{/*\ TIM2\ DMA\ DeInit\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00254}00254\ \ \ \ \ HAL\_DMA\_DeInit(htim\_base-\/>hdma[TIM\_DMA\_ID\_CC1]);}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00255}00255\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ TIM2\_MspDeInit\ 1\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00256}00256\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00257}00257\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ TIM2\_MspDeInit\ 1\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00258}00258\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00259}00259\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00260}00260\ \}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00261}00261\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00268}\mbox{\hyperlink{stm32f1xx__hal__msp_8c_a0e553b32211877322f949b14801bbfa7}{00268}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{stm32f1xx__hal__msp_8c_a0e553b32211877322f949b14801bbfa7}{HAL\_UART\_MspInit}}(UART\_HandleTypeDef*\ huart)}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00269}00269\ \{}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00270}00270\ \ \ GPIO\_InitTypeDef\ GPIO\_InitStruct\ =\ \{0\};}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00271}00271\ \ \ \textcolor{keywordflow}{if}(huart-\/>Instance==USART2)}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00272}00272\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00273}00273\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ USART2\_MspInit\ 0\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00274}00274\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00275}00275\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ USART2\_MspInit\ 0\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00276}00276\ \ \ \ \ \textcolor{comment}{/*\ Peripheral\ clock\ enable\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00277}00277\ \ \ \ \ \_\_HAL\_RCC\_USART2\_CLK\_ENABLE();}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00278}00278\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00279}00279\ \ \ \ \ \_\_HAL\_RCC\_GPIOA\_CLK\_ENABLE();}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00284}00284\ \ \ \ \ GPIO\_InitStruct.Pin\ =\ \mbox{\hyperlink{main_8h_a5644600bf1ed996688dd87dc3f88526c}{USART\_TX\_Pin}}|\mbox{\hyperlink{main_8h_ac93b92f1334823df872908c845c71afc}{USART\_RX\_Pin}};}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00285}00285\ \ \ \ \ GPIO\_InitStruct.Mode\ =\ GPIO\_MODE\_AF\_PP;}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00286}00286\ \ \ \ \ GPIO\_InitStruct.Speed\ =\ GPIO\_SPEED\_FREQ\_LOW;}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00287}00287\ \ \ \ \ HAL\_GPIO\_Init(GPIOA,\ \&GPIO\_InitStruct);}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00288}00288\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00289}00289\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ USART2\_MspInit\ 1\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00290}00290\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00291}00291\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ USART2\_MspInit\ 1\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00292}00292\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00293}00293\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00294}00294\ \}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00295}00295\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00302}\mbox{\hyperlink{stm32f1xx__hal__msp_8c_a718f39804e3b910d738a0e1e46151188}{00302}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{stm32f1xx__hal__msp_8c_a718f39804e3b910d738a0e1e46151188}{HAL\_UART\_MspDeInit}}(UART\_HandleTypeDef*\ huart)}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00303}00303\ \{}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00304}00304\ \ \ \textcolor{keywordflow}{if}(huart-\/>Instance==USART2)}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00305}00305\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00306}00306\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ USART2\_MspDeInit\ 0\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00307}00307\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00308}00308\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ USART2\_MspDeInit\ 0\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00309}00309\ \ \ \ \ \textcolor{comment}{/*\ Peripheral\ clock\ disable\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00310}00310\ \ \ \ \ \_\_HAL\_RCC\_USART2\_CLK\_DISABLE();}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00311}00311\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00316}00316\ \ \ \ \ HAL\_GPIO\_DeInit(GPIOA,\ \mbox{\hyperlink{main_8h_a5644600bf1ed996688dd87dc3f88526c}{USART\_TX\_Pin}}|\mbox{\hyperlink{main_8h_ac93b92f1334823df872908c845c71afc}{USART\_RX\_Pin}});}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00317}00317\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00318}00318\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ USART2\_MspDeInit\ 1\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00319}00319\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00320}00320\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ USART2\_MspDeInit\ 1\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00321}00321\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00322}00322\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00323}00323\ \}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00324}00324\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00325}00325\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ 1\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00326}00326\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00327}00327\ \textcolor{comment}{/*\ USER\ CODE\ END\ 1\ */}}
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00328}00328\ }
+\DoxyCodeLine{\Hypertarget{stm32f1xx__hal__msp_8c_source_l00329}00329\ \textcolor{comment}{/************************\ (C)\ COPYRIGHT\ STMicroelectronics\ *****END\ OF\ FILE****/}}
+
+\end{DoxyCode}

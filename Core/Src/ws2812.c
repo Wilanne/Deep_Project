@@ -2,16 +2,17 @@
   ******************************************************************************
   * @file           : ws2812.c
   * @brief          : WS2812 Leds Lib Sources
-  * @author 		: Kron0s
+  * @author         : Léo
   ******************************************************************************
 **/
 
 #include "ws2812.h"
 
 /**
-  * @brief TIM2 Finish Callback
-  * @retval None
-  */
+ * @brief Callback function called when the PWM pulse is finished.
+ *
+ * @param[in] htim Pointer to the TIM_HandleTypeDef structure.
+ */
 void HAL_TIM_PWM_PulseFinishedCallback(TIM_HandleTypeDef *htim)
 {
 	HAL_TIM_PWM_Stop_DMA(&htim2, TIM_CHANNEL_1);
@@ -19,9 +20,13 @@ void HAL_TIM_PWM_PulseFinishedCallback(TIM_HandleTypeDef *htim)
 }
 
 /**
-  * @brief Set Led Function
-  * @retval None
-  */
+ * @brief Set the color values of a specific LED.
+ *
+ * @param[in] LEDnum The LED number.
+ * @param[in] Red The red color value.
+ * @param[in] Green The green color value.
+ * @param[in] Blue The blue color value.
+ */
 void Set_LED (int LEDnum, int Red, int Green, int Blue)
 {
 	LED_Data[LEDnum].count = LEDnum;
@@ -31,9 +36,10 @@ void Set_LED (int LEDnum, int Red, int Green, int Blue)
 }
 
 /**
-  * @brief Set Brightness Test
-  * @retval None
-  */
+ * @brief Set the brightness of the LEDs.
+ *
+ * @param[in] brightness The brightness value (0-45).
+ */
 void Set_Brightness (int brightness)  // 0-45
 {
 #if USE_BRIGHTNESS
@@ -53,18 +59,15 @@ void Set_Brightness (int brightness)  // 0-45
 	}
 
 #endif
-
 }
 
 /**
-  * @brief Send The 24 bits To The Led Driver
-  * @retval None
-  */
+ * @brief Send the LED data to the WS2812 strip.
+ */
 void WS2812_Send (void)
 {
 	uint32_t indx=0;
 	uint32_t color;
-
 
 	for (int i= 0; i<MAX_LED; i++)
 	{
@@ -80,12 +83,13 @@ void WS2812_Send (void)
 			{
 				pwmData[indx] = 60;  // 2/3 of 90
 			}
-
-			else pwmData[indx] = 30;  // 1/3 of 90
+			else
+			{
+				pwmData[indx] = 30;  // 1/3 of 90
+			}
 
 			indx++;
 		}
-
 	}
 
 	for (int i=0; i<50; i++)
@@ -100,25 +104,24 @@ void WS2812_Send (void)
 }
 
 /**
-  * @brief Rainbow Effect
-  * @retval None
-  */
+ * @brief Perform the Rainbow effect on the LEDs.
+ */
 void Effect_Rainbow(void) {
 	for (int i = 0; i < MAX_LED; i++) {
-			  // Calculate the color based on the rainbow index
 
-			  int red,green,blue;
 
-			  uint8_t hue = rainbow_index + i * RAINBOW_STEP;
-			  red = sin(hue * 3.14159 / 128 + 0) * 127 + 128;
-			  green = sin(hue * 3.14159 / 128 + 2) * 127 + 128;
-			  blue = sin(hue * 3.14159 / 128 + 4) * 127 + 128;
-			  Set_LED(i, red, green, blue);
-		  }
+	// Calculate the color based on the rainbow index
+			int red, green, blue;
+			uint8_t hue = rainbow_index + i * RAINBOW_STEP;
+			red = sin(hue * 3.14159 / 128 + 0) * 127 + 128;
+			green = sin(hue * 3.14159 / 128 + 2) * 127 + 128;
+			blue = sin(hue * 3.14159 / 128 + 4) * 127 + 128;
+			Set_LED(i, red, green, blue);
+	}
 
-		  // Send the updated LED buffer to the strip
-		  WS2812_Send();
+	// Send the updated LED buffer to the strip
+	WS2812_Send();
 
-		  // Increment the rainbow index for the next frame
-		  rainbow_index++;
+	// Increment the rainbow index for the next frame
+	rainbow_index++;
 }

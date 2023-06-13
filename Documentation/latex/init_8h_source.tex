@@ -1,0 +1,36 @@
+\hypertarget{init_8h_source}{}\doxysection{init.\+h}
+\label{init_8h_source}\index{Core/Inc/init.h@{Core/Inc/init.h}}
+\mbox{\hyperlink{init_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{init_8h_source_l00001}00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{init_8h_source_l00002}00002\ \textcolor{comment}{\ *\ init.h}}
+\DoxyCodeLine{\Hypertarget{init_8h_source_l00003}00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{init_8h_source_l00004}00004\ \textcolor{comment}{\ *\ \ Created\ on:\ 2\ mai\ 2023}}
+\DoxyCodeLine{\Hypertarget{init_8h_source_l00005}00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ leoau}}
+\DoxyCodeLine{\Hypertarget{init_8h_source_l00006}00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{init_8h_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{init_8h_source_l00008}00008\ \textcolor{preprocessor}{\#ifndef\ SRC\_INIT\_H\_}}
+\DoxyCodeLine{\Hypertarget{init_8h_source_l00009}00009\ \textcolor{preprocessor}{\#define\ SRC\_INIT\_H\_}}
+\DoxyCodeLine{\Hypertarget{init_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{init_8h_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{main_8h}{main.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{init_8h_source_l00012}00012\ \textcolor{preprocessor}{\#include\ "{}stm32f1xx\_hal.h"{}}}
+\DoxyCodeLine{\Hypertarget{init_8h_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{init_8h_source_l00014}00014\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{init_8h_a70af21c671abfcc773614a9a4f63d920}{SystemClock\_Config}}(\textcolor{keywordtype}{void});\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{init_8h_source_l00015}\mbox{\hyperlink{init_8h_a28dbf2494083ac5f39daa87bf09e4eb3}{00015}}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{init_8h_a28dbf2494083ac5f39daa87bf09e4eb3}{MX\_SPI1\_Init}}(\textcolor{keywordtype}{void});\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{init_8h_source_l00016}\mbox{\hyperlink{init_8h_ae89fdd15729ad41a66911190fcbab23a}{00016}}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{init_8h_ae89fdd15729ad41a66911190fcbab23a}{MX\_GPIO\_Init}}(\textcolor{keywordtype}{void});\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{init_8h_source_l00017}\mbox{\hyperlink{init_8h_a6db1014d713f6f5c0f52a13299ee0733}{00017}}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{init_8h_a6db1014d713f6f5c0f52a13299ee0733}{MX\_USART2\_UART\_Init}}(\textcolor{keywordtype}{void});\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{init_8h_source_l00018}\mbox{\hyperlink{init_8h_a608dc9e9bcaf978f1611f3ec57670f64}{00018}}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{init_8h_a608dc9e9bcaf978f1611f3ec57670f64}{MX\_DMA\_Init}}(\textcolor{keywordtype}{void});\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{init_8h_source_l00019}\mbox{\hyperlink{init_8h_af952250b2d49718b385e14a76fa7c1b8}{00019}}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{init_8h_af952250b2d49718b385e14a76fa7c1b8}{MX\_TIM2\_Init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{init_8h_source_l00020}00020\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{init_8h_a36e79ff7499abd825fd771905e0d8b89}{Init\_All}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{init_8h_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{init_8h_source_l00022}\mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a9c6222bae4d0328dd843ae099623b40b}{00022}}\ SPI\_HandleTypeDef\ \mbox{\hyperlink{init_8h_a9c6222bae4d0328dd843ae099623b40b}{hspi1}};}
+\DoxyCodeLine{\Hypertarget{init_8h_source_l00023}\mbox{\hyperlink{init_8h_ac8cdcfbb7adfcccc5717da58e1e10ae4}{00023}}\ DMA\_HandleTypeDef\ \mbox{\hyperlink{init_8h_ac8cdcfbb7adfcccc5717da58e1e10ae4}{hdma\_spi1\_tx}};}
+\DoxyCodeLine{\Hypertarget{init_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{init_8h_source_l00025}\mbox{\hyperlink{init_8h_a2c80fd5510e2990a59a5c90d745c716c}{00025}}\ TIM\_HandleTypeDef\ \mbox{\hyperlink{init_8h_a2c80fd5510e2990a59a5c90d745c716c}{htim2}};}
+\DoxyCodeLine{\Hypertarget{init_8h_source_l00026}\mbox{\hyperlink{init_8h_ab051b95fbef5ff0c90c0782a26ab85ba}{00026}}\ DMA\_HandleTypeDef\ \mbox{\hyperlink{init_8h_ab051b95fbef5ff0c90c0782a26ab85ba}{hdma\_tim2\_ch1}};}
+\DoxyCodeLine{\Hypertarget{init_8h_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{init_8h_source_l00028}\mbox{\hyperlink{init_8h_aa9479c261d65eecedd3d9582f7f0f89c}{00028}}\ UART\_HandleTypeDef\ \mbox{\hyperlink{init_8h_aa9479c261d65eecedd3d9582f7f0f89c}{huart2}};}
+\DoxyCodeLine{\Hypertarget{init_8h_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{init_8h_source_l00030}00030\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ SRC\_INIT\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

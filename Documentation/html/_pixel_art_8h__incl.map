@@ -1,0 +1,12 @@
+<map id="Core/Inc/PixelArt.h" name="Core/Inc/PixelArt.h">
+<area shape="rect" id="node1" title=" " alt="" coords="89,5,219,32"/>
+<area shape="rect" id="node2" href="$ws2812_8h.html" title=": WS2812 Leds Lib Header" alt="" coords="5,80,82,107"/>
+<area shape="rect" id="node6" href="$_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h.html" title=" " alt="" coords="97,155,257,181"/>
+<area shape="rect" id="node7" href="$_i_l_i9341___g_f_x_8h.html" title=" " alt="" coords="246,80,351,107"/>
+<area shape="rect" id="node10" href="$_pixils_8h.html" title=" " alt="" coords="157,80,221,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="51,304,167,331"/>
+<area shape="rect" id="node4" href="$init_8h.html" title=" " alt="" coords="23,155,72,181"/>
+<area shape="rect" id="node5" href="$main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="79,229,139,256"/>
+<area shape="rect" id="node8" href="$fonts_8h.html" title=" " alt="" coords="333,155,394,181"/>
+<area shape="rect" id="node9" title=" " alt="" coords="331,229,396,256"/>
+</map>

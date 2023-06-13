@@ -1,0 +1,7 @@
+<map id="Core/Inc/ws2812.h" name="Core/Inc/ws2812.h">
+<area shape="rect" id="node1" title=": WS2812 Leds Lib Header" alt="" coords="156,5,284,32"/>
+<area shape="rect" id="node2" href="$_pixel_art_8h.html" title=" " alt="" coords="52,80,183,107"/>
+<area shape="rect" id="node4" href="$main_8c.html" title=": Main program body" alt="" coords="162,155,278,181"/>
+<area shape="rect" id="node5" href="$ws2812_8c.html" title=": WS2812 Leds Lib Sources" alt="" coords="257,80,388,107"/>
+<area shape="rect" id="node3" href="$_pixel_art_8c.html" title="This file contains the definition of all the PixelArt function." alt="" coords="5,155,139,181"/>
+</map>

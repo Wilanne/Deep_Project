@@ -1,0 +1,254 @@
+\hypertarget{init_8h}{}\doxysection{Core/\+Inc/init.h File Reference}
+\label{init_8h}\index{Core/Inc/init.h@{Core/Inc/init.h}}
+{\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stm32f1xx\+\_\+hal.\+h\char`\"{}}\newline
+Include dependency graph for init.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=171pt]{init_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{init_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{init_8h_a70af21c671abfcc773614a9a4f63d920}{System\+Clock\+\_\+\+Config}} (void)
+\begin{DoxyCompactList}\small\item\em Configures the system clock. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{init_8h_a28dbf2494083ac5f39daa87bf09e4eb3}{MX\+\_\+\+SPI1\+\_\+\+Init}} (void)
+\item 
+static void \mbox{\hyperlink{init_8h_ae89fdd15729ad41a66911190fcbab23a}{MX\+\_\+\+GPIO\+\_\+\+Init}} (void)
+\item 
+static void \mbox{\hyperlink{init_8h_a6db1014d713f6f5c0f52a13299ee0733}{MX\+\_\+\+USART2\+\_\+\+UART\+\_\+\+Init}} (void)
+\item 
+static void \mbox{\hyperlink{init_8h_a608dc9e9bcaf978f1611f3ec57670f64}{MX\+\_\+\+DMA\+\_\+\+Init}} (void)
+\item 
+static void \mbox{\hyperlink{init_8h_af952250b2d49718b385e14a76fa7c1b8}{MX\+\_\+\+TIM2\+\_\+\+Init}} (void)
+\item 
+void \mbox{\hyperlink{init_8h_a36e79ff7499abd825fd771905e0d8b89}{Init\+\_\+\+All}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes all the peripherals. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+SPI\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{init_8h_a9c6222bae4d0328dd843ae099623b40b}{hspi1}}
+\item 
+DMA\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{init_8h_ac8cdcfbb7adfcccc5717da58e1e10ae4}{hdma\+\_\+spi1\+\_\+tx}}
+\item 
+TIM\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{init_8h_a2c80fd5510e2990a59a5c90d745c716c}{htim2}}
+\item 
+DMA\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{init_8h_ab051b95fbef5ff0c90c0782a26ab85ba}{hdma\+\_\+tim2\+\_\+ch1}}
+\item 
+UART\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{init_8h_aa9479c261d65eecedd3d9582f7f0f89c}{huart2}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{init_8h_a36e79ff7499abd825fd771905e0d8b89}\label{init_8h_a36e79ff7499abd825fd771905e0d8b89}} 
+\index{init.h@{init.h}!Init\_All@{Init\_All}}
+\index{Init\_All@{Init\_All}!init.h@{init.h}}
+\doxysubsubsection{\texorpdfstring{Init\_All()}{Init\_All()}}
+{\footnotesize\ttfamily void Init\+\_\+\+All (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initializes all the peripherals. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{init_8c_source_l00238}{238}} of file \mbox{\hyperlink{init_8c_source}{init.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ HAL\_Init();}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \mbox{\hyperlink{init_8c_a70af21c671abfcc773614a9a4f63d920}{SystemClock\_Config}}();}
+\DoxyCodeLine{00241\ }
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \textcolor{comment}{/*\ Initialize\ all\ configured\ peripherals\ */}}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \mbox{\hyperlink{init_8c_ae89fdd15729ad41a66911190fcbab23a}{MX\_GPIO\_Init}}();}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \mbox{\hyperlink{init_8c_a6db1014d713f6f5c0f52a13299ee0733}{MX\_USART2\_UART\_Init}}();}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \mbox{\hyperlink{init_8c_a608dc9e9bcaf978f1611f3ec57670f64}{MX\_DMA\_Init}}();}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \mbox{\hyperlink{init_8c_af952250b2d49718b385e14a76fa7c1b8}{MX\_TIM2\_Init}}();}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \mbox{\hyperlink{init_8c_a28dbf2494083ac5f39daa87bf09e4eb3}{MX\_SPI1\_Init}}();}
+\DoxyCodeLine{00248\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{init_8h_a36e79ff7499abd825fd771905e0d8b89_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{init_8h_a36e79ff7499abd825fd771905e0d8b89_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{init_8h_a608dc9e9bcaf978f1611f3ec57670f64}\label{init_8h_a608dc9e9bcaf978f1611f3ec57670f64}} 
+\index{init.h@{init.h}!MX\_DMA\_Init@{MX\_DMA\_Init}}
+\index{MX\_DMA\_Init@{MX\_DMA\_Init}!init.h@{init.h}}
+\doxysubsubsection{\texorpdfstring{MX\_DMA\_Init()}{MX\_DMA\_Init()}}
+{\footnotesize\ttfamily static void MX\+\_\+\+DMA\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{init_8h_ae89fdd15729ad41a66911190fcbab23a}\label{init_8h_ae89fdd15729ad41a66911190fcbab23a}} 
+\index{init.h@{init.h}!MX\_GPIO\_Init@{MX\_GPIO\_Init}}
+\index{MX\_GPIO\_Init@{MX\_GPIO\_Init}!init.h@{init.h}}
+\doxysubsubsection{\texorpdfstring{MX\_GPIO\_Init()}{MX\_GPIO\_Init()}}
+{\footnotesize\ttfamily static void MX\+\_\+\+GPIO\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{init_8h_a28dbf2494083ac5f39daa87bf09e4eb3}\label{init_8h_a28dbf2494083ac5f39daa87bf09e4eb3}} 
+\index{init.h@{init.h}!MX\_SPI1\_Init@{MX\_SPI1\_Init}}
+\index{MX\_SPI1\_Init@{MX\_SPI1\_Init}!init.h@{init.h}}
+\doxysubsubsection{\texorpdfstring{MX\_SPI1\_Init()}{MX\_SPI1\_Init()}}
+{\footnotesize\ttfamily static void MX\+\_\+\+SPI1\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{init_8h_af952250b2d49718b385e14a76fa7c1b8}\label{init_8h_af952250b2d49718b385e14a76fa7c1b8}} 
+\index{init.h@{init.h}!MX\_TIM2\_Init@{MX\_TIM2\_Init}}
+\index{MX\_TIM2\_Init@{MX\_TIM2\_Init}!init.h@{init.h}}
+\doxysubsubsection{\texorpdfstring{MX\_TIM2\_Init()}{MX\_TIM2\_Init()}}
+{\footnotesize\ttfamily static void MX\+\_\+\+TIM2\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{init_8h_a6db1014d713f6f5c0f52a13299ee0733}\label{init_8h_a6db1014d713f6f5c0f52a13299ee0733}} 
+\index{init.h@{init.h}!MX\_USART2\_UART\_Init@{MX\_USART2\_UART\_Init}}
+\index{MX\_USART2\_UART\_Init@{MX\_USART2\_UART\_Init}!init.h@{init.h}}
+\doxysubsubsection{\texorpdfstring{MX\_USART2\_UART\_Init()}{MX\_USART2\_UART\_Init()}}
+{\footnotesize\ttfamily static void MX\+\_\+\+USART2\+\_\+\+UART\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{init_8h_a70af21c671abfcc773614a9a4f63d920}\label{init_8h_a70af21c671abfcc773614a9a4f63d920}} 
+\index{init.h@{init.h}!SystemClock\_Config@{SystemClock\_Config}}
+\index{SystemClock\_Config@{SystemClock\_Config}!init.h@{init.h}}
+\doxysubsubsection{\texorpdfstring{SystemClock\_Config()}{SystemClock\_Config()}}
+{\footnotesize\ttfamily void System\+Clock\+\_\+\+Config (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Configures the system clock. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+Initializes the RCC Oscillators according to the specified parameters in the RCC\+\_\+\+Osc\+Init\+Type\+Def structure.
+
+Initializes the CPU, AHB and APB buses clocks
+
+Definition at line \mbox{\hyperlink{init_8c_source_l00016}{16}} of file \mbox{\hyperlink{init_8c_source}{init.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017\ \{}
+\DoxyCodeLine{00018\ \ \ RCC\_OscInitTypeDef\ RCC\_OscInitStruct\ =\ \{0\};}
+\DoxyCodeLine{00019\ \ \ RCC\_ClkInitTypeDef\ RCC\_ClkInitStruct\ =\ \{0\};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00024\ \ \ RCC\_OscInitStruct.OscillatorType\ =\ RCC\_OSCILLATORTYPE\_HSE;}
+\DoxyCodeLine{00025\ \ \ RCC\_OscInitStruct.HSEState\ =\ RCC\_HSE\_BYPASS;}
+\DoxyCodeLine{00026\ \ \ RCC\_OscInitStruct.HSEPredivValue\ =\ RCC\_HSE\_PREDIV\_DIV1;}
+\DoxyCodeLine{00027\ \ \ RCC\_OscInitStruct.HSIState\ =\ RCC\_HSI\_ON;}
+\DoxyCodeLine{00028\ \ \ RCC\_OscInitStruct.PLL.PLLState\ =\ RCC\_PLL\_ON;}
+\DoxyCodeLine{00029\ \ \ RCC\_OscInitStruct.PLL.PLLSource\ =\ RCC\_PLLSOURCE\_HSE;}
+\DoxyCodeLine{00030\ \ \ RCC\_OscInitStruct.PLL.PLLMUL\ =\ RCC\_PLL\_MUL9;}
+\DoxyCodeLine{00031\ \ \ \textcolor{keywordflow}{if}\ (HAL\_RCC\_OscConfig(\&RCC\_OscInitStruct)\ !=\ HAL\_OK)}
+\DoxyCodeLine{00032\ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{main_8h_a1730ffe1e560465665eb47d9264826f9}{Error\_Handler}}();}
+\DoxyCodeLine{00034\ \ \ \}}
+\DoxyCodeLine{00037\ \ \ RCC\_ClkInitStruct.ClockType\ =\ RCC\_CLOCKTYPE\_HCLK|RCC\_CLOCKTYPE\_SYSCLK}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |RCC\_CLOCKTYPE\_PCLK1|RCC\_CLOCKTYPE\_PCLK2;}
+\DoxyCodeLine{00039\ \ \ RCC\_ClkInitStruct.SYSCLKSource\ =\ RCC\_SYSCLKSOURCE\_PLLCLK;}
+\DoxyCodeLine{00040\ \ \ RCC\_ClkInitStruct.AHBCLKDivider\ =\ RCC\_SYSCLK\_DIV1;}
+\DoxyCodeLine{00041\ \ \ RCC\_ClkInitStruct.APB1CLKDivider\ =\ RCC\_HCLK\_DIV2;}
+\DoxyCodeLine{00042\ \ \ RCC\_ClkInitStruct.APB2CLKDivider\ =\ RCC\_HCLK\_DIV1;}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \textcolor{keywordflow}{if}\ (HAL\_RCC\_ClockConfig(\&RCC\_ClkInitStruct,\ FLASH\_LATENCY\_2)\ !=\ HAL\_OK)}
+\DoxyCodeLine{00045\ \ \ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{main_8h_a1730ffe1e560465665eb47d9264826f9}{Error\_Handler}}();}
+\DoxyCodeLine{00047\ \ \ \}}
+\DoxyCodeLine{00048\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{init_8h_a70af21c671abfcc773614a9a4f63d920_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{init_8h_a70af21c671abfcc773614a9a4f63d920_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{init_8h_ac8cdcfbb7adfcccc5717da58e1e10ae4}\label{init_8h_ac8cdcfbb7adfcccc5717da58e1e10ae4}} 
+\index{init.h@{init.h}!hdma\_spi1\_tx@{hdma\_spi1\_tx}}
+\index{hdma\_spi1\_tx@{hdma\_spi1\_tx}!init.h@{init.h}}
+\doxysubsubsection{\texorpdfstring{hdma\_spi1\_tx}{hdma\_spi1\_tx}}
+{\footnotesize\ttfamily DMA\+\_\+\+Handle\+Type\+Def hdma\+\_\+spi1\+\_\+tx}
+
+
+
+Definition at line \mbox{\hyperlink{init_8h_source_l00023}{23}} of file \mbox{\hyperlink{init_8h_source}{init.\+h}}.
+
+\mbox{\Hypertarget{init_8h_ab051b95fbef5ff0c90c0782a26ab85ba}\label{init_8h_ab051b95fbef5ff0c90c0782a26ab85ba}} 
+\index{init.h@{init.h}!hdma\_tim2\_ch1@{hdma\_tim2\_ch1}}
+\index{hdma\_tim2\_ch1@{hdma\_tim2\_ch1}!init.h@{init.h}}
+\doxysubsubsection{\texorpdfstring{hdma\_tim2\_ch1}{hdma\_tim2\_ch1}}
+{\footnotesize\ttfamily DMA\+\_\+\+Handle\+Type\+Def hdma\+\_\+tim2\+\_\+ch1}
+
+
+
+Definition at line \mbox{\hyperlink{init_8h_source_l00026}{26}} of file \mbox{\hyperlink{init_8h_source}{init.\+h}}.
+
+\mbox{\Hypertarget{init_8h_a9c6222bae4d0328dd843ae099623b40b}\label{init_8h_a9c6222bae4d0328dd843ae099623b40b}} 
+\index{init.h@{init.h}!hspi1@{hspi1}}
+\index{hspi1@{hspi1}!init.h@{init.h}}
+\doxysubsubsection{\texorpdfstring{hspi1}{hspi1}}
+{\footnotesize\ttfamily SPI\+\_\+\+Handle\+Type\+Def hspi1}
+
+
+
+Definition at line \mbox{\hyperlink{init_8h_source_l00022}{22}} of file \mbox{\hyperlink{init_8h_source}{init.\+h}}.
+
+\mbox{\Hypertarget{init_8h_a2c80fd5510e2990a59a5c90d745c716c}\label{init_8h_a2c80fd5510e2990a59a5c90d745c716c}} 
+\index{init.h@{init.h}!htim2@{htim2}}
+\index{htim2@{htim2}!init.h@{init.h}}
+\doxysubsubsection{\texorpdfstring{htim2}{htim2}}
+{\footnotesize\ttfamily TIM\+\_\+\+Handle\+Type\+Def htim2}
+
+
+
+Definition at line \mbox{\hyperlink{init_8h_source_l00025}{25}} of file \mbox{\hyperlink{init_8h_source}{init.\+h}}.
+
+\mbox{\Hypertarget{init_8h_aa9479c261d65eecedd3d9582f7f0f89c}\label{init_8h_aa9479c261d65eecedd3d9582f7f0f89c}} 
+\index{init.h@{init.h}!huart2@{huart2}}
+\index{huart2@{huart2}!init.h@{init.h}}
+\doxysubsubsection{\texorpdfstring{huart2}{huart2}}
+{\footnotesize\ttfamily UART\+\_\+\+Handle\+Type\+Def huart2}
+
+
+
+Definition at line \mbox{\hyperlink{init_8h_source_l00028}{28}} of file \mbox{\hyperlink{init_8h_source}{init.\+h}}.
+

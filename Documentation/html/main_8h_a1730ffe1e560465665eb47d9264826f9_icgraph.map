@@ -1,0 +1,11 @@
+<map id="Error_Handler" name="Error_Handler">
+<area shape="rect" id="node1" title=" " alt="" coords="420,132,521,159"/>
+<area shape="rect" id="node2" href="$stm32f1xx__hal__msp_8c.html#a17f583be14b22caffa6c4e56dcd035ef" title="SPI MSP Initialization This function configures the hardware resources used in this example." alt="" coords="230,5,353,32"/>
+<area shape="rect" id="node3" href="$stm32f1xx__hal__msp_8c.html#abb25ade2f7e3f7aae167bd52270c2b86" title="TIM_Base MSP Initialization This function configures the hardware resources used in this example." alt="" coords="212,56,372,83"/>
+<area shape="rect" id="node4" href="$init_8c.html#a28dbf2494083ac5f39daa87bf09e4eb3" title="SPI init." alt="" coords="243,107,341,133"/>
+<area shape="rect" id="node7" href="$init_8c.html#af952250b2d49718b385e14a76fa7c1b8" title="TIM2 Initialization Function." alt="" coords="243,157,341,184"/>
+<area shape="rect" id="node8" href="$init_8c.html#a6db1014d713f6f5c0f52a13299ee0733" title="USART2 Initialization Function." alt="" coords="211,208,372,235"/>
+<area shape="rect" id="node9" href="$init_8c.html#a70af21c671abfcc773614a9a4f63d920" title="Configures the system clock." alt="" coords="221,259,363,285"/>
+<area shape="rect" id="node5" href="$init_8c.html#a36e79ff7499abd825fd771905e0d8b89" title="Initializes all the peripherals." alt="" coords="103,183,163,209"/>
+<area shape="rect" id="node6" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,183,55,209"/>
+</map>

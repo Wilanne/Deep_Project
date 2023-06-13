@@ -1,0 +1,7 @@
+<map id="PixelArt_DrawGrid" name="PixelArt_DrawGrid">
+<area shape="rect" id="node1" title="Draw a grid on the screen." alt="" coords="5,31,133,57"/>
+<area shape="rect" id="node2" href="$_i_l_i9341___s_t_m32___driver_8c.html#a2e8d50aa82cced7b5bcda6762629692b" title=" " alt="" coords="181,31,318,57"/>
+<area shape="rect" id="node3" href="$_i_l_i9341___s_t_m32___driver_8c.html#a32dc1a25dba771348cc10ccb2487cb87" title=" " alt="" coords="366,5,525,32"/>
+<area shape="rect" id="node5" href="$_i_l_i9341___s_t_m32___driver_8c.html#a8f7d0dcd7326d2c24f1db1ef7dd3742e" title=" " alt="" coords="382,56,509,83"/>
+<area shape="rect" id="node4" href="$_i_l_i9341___s_t_m32___driver_8c.html#a4f7492b508a7741eb188c0eea1971eb2" title=" " alt="" coords="573,31,685,57"/>
+</map>

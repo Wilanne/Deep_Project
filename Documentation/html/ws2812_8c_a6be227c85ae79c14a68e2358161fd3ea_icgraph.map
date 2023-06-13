@@ -1,0 +1,4 @@
+<map id="WS2812_Send" name="WS2812_Send">
+<area shape="rect" id="node1" title="Send the LED data to the WS2812 strip." alt="" coords="164,5,272,32"/>
+<area shape="rect" id="node2" href="$ws2812_8c.html#a6d32a890a085c5c29c1efb3edfb7f617" title="Perform the Rainbow effect on the LEDs." alt="" coords="5,5,116,32"/>
+</map>
