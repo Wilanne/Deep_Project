@@ -1,0 +1,8 @@
+<map id="ILI9341_DrawHollowCircle" name="ILI9341_DrawHollowCircle">
+<area shape="rect" id="node1" title="Draws a hollow circle on the ILI9341 display." alt="" coords="5,31,175,57"/>
+<area shape="rect" id="node2" href="$_i_l_i9341___s_t_m32___driver_8c.html#a691f1e59bdcce40b8307538de50c35a0" title=" " alt="" coords="223,31,350,57"/>
+<area shape="rect" id="node3" href="$_i_l_i9341___s_t_m32___driver_8c.html#abf0b301d783c8dbcbcd4c1ac05e2fc3e" title=" " alt="" coords="411,5,544,32"/>
+<area shape="rect" id="node5" href="$_i_l_i9341___s_t_m32___driver_8c.html#a32dc1a25dba771348cc10ccb2487cb87" title=" " alt="" coords="398,56,557,83"/>
+<area shape="rect" id="node4" href="$_i_l_i9341___s_t_m32___driver_8c.html#a306447bbf42896dcd0088c50cca7d3dc" title=" " alt="" coords="605,5,750,32"/>
+<area shape="rect" id="node6" href="$_i_l_i9341___s_t_m32___driver_8c.html#a4f7492b508a7741eb188c0eea1971eb2" title=" " alt="" coords="622,56,733,83"/>
+</map>

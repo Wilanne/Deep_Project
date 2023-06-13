@@ -1,0 +1,347 @@
+\hypertarget{_pixel_art_8c}{}\doxysection{Core/\+Src/\+Pixel\+Art.c File Reference}
+\label{_pixel_art_8c}\index{Core/Src/PixelArt.c@{Core/Src/PixelArt.c}}
+
+
+This file contains the definition of all the Pixel\+Art function.  
+
+
+{\ttfamily \#include \char`\"{}Pixel\+Art.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Pixils.\+h\char`\"{}}\newline
+Include dependency graph for Pixel\+Art.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_pixel_art_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_pixel_art_8c_a4ec3ff275a748bfd20f615c277be6ed9}{Pixel\+Art\+\_\+\+Init\+Screen}} ()
+\begin{DoxyCompactList}\small\item\em Initialize the screen for Pixel\+Art. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_pixel_art_8c_a16d70057ada8d7853a30c848238fd055}{Pixel\+Art\+\_\+\+Draw\+Grid}} (uint16\+\_\+t m\+\_\+grid\+Color, uint16\+\_\+t m\+\_\+fill\+Color, uint8\+\_\+t m\+\_\+cell\+Size, float m\+\_\+scal\+Factor)
+\begin{DoxyCompactList}\small\item\em Draw a grid on the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_pixel_art_8c_aead41c310def9f779057e6cee7f077e8}{Pixel\+Art\+\_\+\+Draw\+Character}} (\mbox{\hyperlink{structcharacter_pixels8__8}{character\+Pixels8\+\_\+8}} character, uint8\+\_\+t m\+\_\+cell\+Size, uint8\+\_\+t m\+\_\+border\+Space, float m\+\_\+scal\+Factor)
+\begin{DoxyCompactList}\small\item\em Draw a character on the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_pixel_art_8c_ab1502f1ce9060ce7748d17ddd67bb760}{Pixel\+Art\+\_\+\+Anime\+Character}} (\mbox{\hyperlink{structcharacter_pixels8__8}{character\+Pixels8\+\_\+8}} character\mbox{[}4\mbox{]}, uint8\+\_\+t m\+\_\+cell\+Size, uint8\+\_\+t m\+\_\+border\+Space, float m\+\_\+scal\+Factor)
+\begin{DoxyCompactList}\small\item\em Animate a sequence of characters on the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_pixel_art_8c_ad8f2bda4936099d7883d5fb888fb44ad}{Pixel\+Art\+\_\+\+Screen\+Test}} ()
+\begin{DoxyCompactList}\small\item\em Perform a screen test by filling the screen with a color and displaying text. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{_pixel_art_8c_a70fbd315df33bf9039e036725b569e7f}{delay}} = 115
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains the definition of all the Pixel\+Art function. 
+
+\begin{DoxyDate}{Date}
+11 mai 2023 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+leoau 
+\end{DoxyAuthor}
+
+
+Definition in file \mbox{\hyperlink{_pixel_art_8c_source}{Pixel\+Art.\+c}}.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_pixel_art_8c_ab1502f1ce9060ce7748d17ddd67bb760}\label{_pixel_art_8c_ab1502f1ce9060ce7748d17ddd67bb760}} 
+\index{PixelArt.c@{PixelArt.c}!PixelArt\_AnimeCharacter@{PixelArt\_AnimeCharacter}}
+\index{PixelArt\_AnimeCharacter@{PixelArt\_AnimeCharacter}!PixelArt.c@{PixelArt.c}}
+\doxysubsubsection{\texorpdfstring{PixelArt\_AnimeCharacter()}{PixelArt\_AnimeCharacter()}}
+{\footnotesize\ttfamily void Pixel\+Art\+\_\+\+Anime\+Character (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcharacter_pixels8__8}{character\+Pixels8\+\_\+8}}}]{character\mbox{[}4\mbox{]},  }\item[{uint8\+\_\+t}]{m\+\_\+cell\+Size,  }\item[{uint8\+\_\+t}]{m\+\_\+border\+Space,  }\item[{float}]{m\+\_\+scal\+Factor }\end{DoxyParamCaption})}
+
+
+
+Animate a sequence of characters on the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em character} & An array of characters to animate. \\
+\hline
+{\em m\+\_\+cell\+Size} & The size of each cell in the grid. \\
+\hline
+{\em m\+\_\+border\+Space} & The amount of border space to leave around each cell. \\
+\hline
+{\em m\+\_\+scal\+Factor} & The scale factor to adjust the cell size. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_pixel_art_8c_source_l00124}{124}} of file \mbox{\hyperlink{_pixel_art_8c_source}{Pixel\+Art.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordflow}{for}\ (uint8\_t\ i\ =\ 0;\ i\ <\ 4;\ ++i)\ \{}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_pixel_art_8c_aead41c310def9f779057e6cee7f077e8}{PixelArt\_DrawCharacter}}(character[i],\ m\_cellSize,\ m\_borderSpace,\ m\_scalFactor);}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ animation\ speed}}
+\DoxyCodeLine{00128\ \ \ \ \ \}}
+\DoxyCodeLine{00129\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_pixel_art_8c_ab1502f1ce9060ce7748d17ddd67bb760_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{_pixel_art_8c_ab1502f1ce9060ce7748d17ddd67bb760_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_pixel_art_8c_aead41c310def9f779057e6cee7f077e8}\label{_pixel_art_8c_aead41c310def9f779057e6cee7f077e8}} 
+\index{PixelArt.c@{PixelArt.c}!PixelArt\_DrawCharacter@{PixelArt\_DrawCharacter}}
+\index{PixelArt\_DrawCharacter@{PixelArt\_DrawCharacter}!PixelArt.c@{PixelArt.c}}
+\doxysubsubsection{\texorpdfstring{PixelArt\_DrawCharacter()}{PixelArt\_DrawCharacter()}}
+{\footnotesize\ttfamily void Pixel\+Art\+\_\+\+Draw\+Character (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcharacter_pixels8__8}{character\+Pixels8\+\_\+8}}}]{character,  }\item[{uint8\+\_\+t}]{m\+\_\+cell\+Size,  }\item[{uint8\+\_\+t}]{m\+\_\+border\+Space,  }\item[{float}]{m\+\_\+scal\+Factor }\end{DoxyParamCaption})}
+
+
+
+Draw a character on the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em character} & The character to draw. \\
+\hline
+{\em m\+\_\+cell\+Size} & The size of each cell in the grid. \\
+\hline
+{\em m\+\_\+border\+Space} & The amount of border space to leave around each cell. \\
+\hline
+{\em m\+\_\+scal\+Factor} & The scale factor to adjust the cell size. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_pixel_art_8c_source_l00085}{85}} of file \mbox{\hyperlink{_pixel_art_8c_source}{Pixel\+Art.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{comment}{//\ if\ grid\ 0\ ||\ 1\ ifndef\ ...}}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{comment}{//\ Define\ the\ size\ of\ each\ cell\ in\ the\ grid}}
+\DoxyCodeLine{00089\ \ \ \ \ uint8\_t\ cellSize\ =\ m\_cellSize;}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ uint8\_t\ width\ =\ cellSize;}
+\DoxyCodeLine{00092\ \ \ \ \ uint8\_t\ height\ =\ cellSize;}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{comment}{//\ Scale\ the\ model\ according\ to\ a\ scale\ ratio}}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordflow}{if}\ (m\_scalFactor\ !=\ 0)}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ cellSize\ =\ (uint8\_t)cellSize\ *\ m\_scalFactor;}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{comment}{//\ Define\ the\ position\ of\ the\ grid\ on\ the\ display}}
+\DoxyCodeLine{00099\ \ \ \ \ uint16\_t\ startX\ =\ (\mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a750a9b79acd8b1bd45cc2d8b85c84444}{ILI9341\_SCREEN\_HEIGHT}}\ -\/\ 8\ *\ cellSize)\ /\ 2;}
+\DoxyCodeLine{00100\ \ \ \ \ uint16\_t\ startY\ =\ (\mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_ab3097a8107773b0958e351b195d6fd28}{ILI9341\_SCREEN\_WIDTH}}\ -\/\ 8\ *\ cellSize)\ /\ 2;}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{comment}{//\ Draw\ the\ character}}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordflow}{for}\ (uint16\_t\ i\ =\ 0;\ i\ <\ 8;\ i++)\ \{}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (uint16\_t\ j\ =\ 0;\ j\ <\ 8;\ j++)\ \{}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Calculate\ the\ position\ and\ dimensions\ of\ each\ rectangle}}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ uint16\_t\ x\ =\ startX\ +\ i\ *\ cellSize;}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ uint16\_t\ y\ =\ startY\ +\ j\ *\ cellSize;}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Fill\ each\ rectangle\ with\ the\ specified\ color}}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ uint16\_t\ color\ =\ character.\mbox{\hyperlink{structcharacter_pixels8__8_a18f01baaad513eca35bac8b199c18e65}{pixels}}[i][j];}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_i_l_i9341___g_f_x_8h_a5a03b6a087c9dab0d183311980c0fc08}{ILI9341\_DrawFilledRectangleCoord}}(x,\ y,\ x\ +\ width\ -\/\ m\_borderSpace,\ y\ +\ height\ -\/\ m\_borderSpace,\ color);}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ HAL\_Delay(100);}
+\DoxyCodeLine{00114\ \ \ \ \ \}}
+\DoxyCodeLine{00115\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_pixel_art_8c_aead41c310def9f779057e6cee7f077e8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_pixel_art_8c_aead41c310def9f779057e6cee7f077e8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_pixel_art_8c_a16d70057ada8d7853a30c848238fd055}\label{_pixel_art_8c_a16d70057ada8d7853a30c848238fd055}} 
+\index{PixelArt.c@{PixelArt.c}!PixelArt\_DrawGrid@{PixelArt\_DrawGrid}}
+\index{PixelArt\_DrawGrid@{PixelArt\_DrawGrid}!PixelArt.c@{PixelArt.c}}
+\doxysubsubsection{\texorpdfstring{PixelArt\_DrawGrid()}{PixelArt\_DrawGrid()}}
+{\footnotesize\ttfamily void Pixel\+Art\+\_\+\+Draw\+Grid (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{m\+\_\+grid\+Color,  }\item[{uint16\+\_\+t}]{m\+\_\+fill\+Color,  }\item[{uint8\+\_\+t}]{m\+\_\+cell\+Size,  }\item[{float}]{m\+\_\+scal\+Factor }\end{DoxyParamCaption})}
+
+
+
+Draw a grid on the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m\+\_\+grid\+Color} & The color of the grid lines. \\
+\hline
+{\em m\+\_\+fill\+Color} & The color to fill each cell of the grid. \\
+\hline
+{\em m\+\_\+cell\+Size} & The size of each cell in the grid. \\
+\hline
+{\em m\+\_\+scal\+Factor} & The scale factor to adjust the cell size. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_pixel_art_8c_source_l00031}{31}} of file \mbox{\hyperlink{_pixel_art_8c_source}{Pixel\+Art.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a2e8d50aa82cced7b5bcda6762629692b}{ILI9341\_SetRotation}}(\mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_aaf354859347f5ee6496a961c0abf3c96}{SCREEN\_VERTICAL\_1}});}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ uint16\_t\ gridColor\ =\ m\_gridColor;\ \textcolor{comment}{/*\ Specify\ the\ desired\ color\ for\ the\ grid\ */}}
+\DoxyCodeLine{00035\ \ \ \ \ uint16\_t\ fillColor\ =\ m\_fillColor;}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{comment}{//\ Define\ the\ size\ of\ each\ cell\ in\ the\ grid}}
+\DoxyCodeLine{00038\ \ \ \ \ uint8\_t\ cellSize\ =\ m\_cellSize;}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordflow}{if}\ (m\_scalFactor\ !=\ 0)}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ cellSize\ =\ (uint8\_t)cellSize\ *\ m\_scalFactor;}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{comment}{//\ Define\ the\ position\ of\ the\ grid\ on\ the\ display}}
+\DoxyCodeLine{00044\ \ \ \ \ uint16\_t\ startX\ =\ (\mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a750a9b79acd8b1bd45cc2d8b85c84444}{ILI9341\_SCREEN\_HEIGHT}}\ -\/\ 8\ *\ cellSize)\ /\ 2;}
+\DoxyCodeLine{00045\ \ \ \ \ uint16\_t\ startY\ =\ (\mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_ab3097a8107773b0958e351b195d6fd28}{ILI9341\_SCREEN\_WIDTH}}\ -\/\ 8\ *\ cellSize)\ /\ 2;}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{comment}{/*\ Draw\ grid\ only }}
+\DoxyCodeLine{00048\ \textcolor{comment}{\ \ \ \ for\ (uint16\_t\ i\ =\ 0;\ i\ <=\ 8;\ i++)\ \{ }}
+\DoxyCodeLine{00049\ \textcolor{comment}{\ \ \ \ \ \ \ \ //\ Draw\ vertical\ lines }}
+\DoxyCodeLine{00050\ \textcolor{comment}{\ \ \ \ \ \ \ \ uint16\_t\ x\ =\ startX\ +\ i\ *\ cellSize; }}
+\DoxyCodeLine{00051\ \textcolor{comment}{\ \ \ \ \ \ \ \ ILI9341\_DrawVLine(x,\ startY,\ 8\ *\ cellSize,\ color); }}
+\DoxyCodeLine{00052\ \textcolor{comment}{}}
+\DoxyCodeLine{00053\ \textcolor{comment}{\ \ \ \ \ \ \ \ //\ Draw\ horizontal\ lines }}
+\DoxyCodeLine{00054\ \textcolor{comment}{\ \ \ \ \ \ \ \ uint16\_t\ y\ =\ startY\ +\ i\ *\ cellSize; }}
+\DoxyCodeLine{00055\ \textcolor{comment}{\ \ \ \ \ \ \ \ ILI9341\_DrawHLine(startX,\ y,\ 8\ *\ cellSize,\ color); }}
+\DoxyCodeLine{00056\ \textcolor{comment}{\ \ \ \ \} }}
+\DoxyCodeLine{00057\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{comment}{/*\ Draw\ the\ grid\ and\ fill }}
+\DoxyCodeLine{00060\ \textcolor{comment}{\ \ \ \ for\ (uint16\_t\ i\ =\ 0;\ i\ <\ 8;\ i++)\ \{ }}
+\DoxyCodeLine{00061\ \textcolor{comment}{\ \ \ \ \ \ \ \ for\ (uint16\_t\ j\ =\ 0;\ j\ <\ 8;\ j++)\ \{ }}
+\DoxyCodeLine{00062\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ //\ Calculate\ the\ position\ and\ dimensions\ of\ each\ rectangle }}
+\DoxyCodeLine{00063\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ uint16\_t\ x\ =\ startX\ +\ i\ *\ cellSize; }}
+\DoxyCodeLine{00064\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ uint16\_t\ y\ =\ startY\ +\ j\ *\ cellSize; }}
+\DoxyCodeLine{00065\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ uint16\_t\ width\ =\ cellSize; }}
+\DoxyCodeLine{00066\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ uint16\_t\ height\ =\ cellSize; }}
+\DoxyCodeLine{00067\ \textcolor{comment}{}}
+\DoxyCodeLine{00068\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ //\ Draw\ the\ grid\ lines\ on\ top\ of\ the\ filled\ rectangles }}
+\DoxyCodeLine{00069\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ ILI9341\_DrawRectangle(x,\ y,\ width,\ height,\ gridColor); }}
+\DoxyCodeLine{00070\ \textcolor{comment}{}}
+\DoxyCodeLine{00071\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ //\ Fill\ each\ rectangle\ with\ the\ specified\ fill\ color }}
+\DoxyCodeLine{00072\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ ILI9341\_DrawFilledRectangleCoord(x,\ y,\ x\ +\ width\ -\/\ 1V\ thickness,\ y\ +\ height\ -\/\ 1H\ thickness,\ fillColor); }}
+\DoxyCodeLine{00073\ \textcolor{comment}{\ \ \ \ \ \ \ \ \} }}
+\DoxyCodeLine{00074\ \textcolor{comment}{\ \ \ \ \} }}
+\DoxyCodeLine{00075\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00076\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_pixel_art_8c_a16d70057ada8d7853a30c848238fd055_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_pixel_art_8c_a4ec3ff275a748bfd20f615c277be6ed9}\label{_pixel_art_8c_a4ec3ff275a748bfd20f615c277be6ed9}} 
+\index{PixelArt.c@{PixelArt.c}!PixelArt\_InitScreen@{PixelArt\_InitScreen}}
+\index{PixelArt\_InitScreen@{PixelArt\_InitScreen}!PixelArt.c@{PixelArt.c}}
+\doxysubsubsection{\texorpdfstring{PixelArt\_InitScreen()}{PixelArt\_InitScreen()}}
+{\footnotesize\ttfamily void Pixel\+Art\+\_\+\+Init\+Screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialize the screen for Pixel\+Art. 
+
+
+
+Definition at line \mbox{\hyperlink{_pixel_art_8c_source_l00018}{18}} of file \mbox{\hyperlink{_pixel_art_8c_source}{Pixel\+Art.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_ad5cdca394aae512e37176b6a30332a68}{ILI9341\_Init}}();}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a9ca469fff3b2f2814946671aee9ed59e}{ILI9341\_FillScreen}}(\mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a8eb0b110eac0a6677168ac68ae6db596}{DGY}});}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a2e8d50aa82cced7b5bcda6762629692b}{ILI9341\_SetRotation}}(\mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_aaf354859347f5ee6496a961c0abf3c96}{SCREEN\_VERTICAL\_1}});}
+\DoxyCodeLine{00022\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_pixel_art_8c_a4ec3ff275a748bfd20f615c277be6ed9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{_pixel_art_8c_a4ec3ff275a748bfd20f615c277be6ed9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_pixel_art_8c_ad8f2bda4936099d7883d5fb888fb44ad}\label{_pixel_art_8c_ad8f2bda4936099d7883d5fb888fb44ad}} 
+\index{PixelArt.c@{PixelArt.c}!PixelArt\_ScreenTest@{PixelArt\_ScreenTest}}
+\index{PixelArt\_ScreenTest@{PixelArt\_ScreenTest}!PixelArt.c@{PixelArt.c}}
+\doxysubsubsection{\texorpdfstring{PixelArt\_ScreenTest()}{PixelArt\_ScreenTest()}}
+{\footnotesize\ttfamily void Pixel\+Art\+\_\+\+Screen\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Perform a screen test by filling the screen with a color and displaying text. 
+
+
+
+Definition at line \mbox{\hyperlink{_pixel_art_8c_source_l00134}{134}} of file \mbox{\hyperlink{_pixel_art_8c_source}{Pixel\+Art.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00135\ \ \ \ \ \mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_ad5cdca394aae512e37176b6a30332a68}{ILI9341\_Init}}();}
+\DoxyCodeLine{00136\ \ \ \ \ \mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a9ca469fff3b2f2814946671aee9ed59e}{ILI9341\_FillScreen}}(\mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a649b8f01fd6c0f47ff3cbddaeba63bfb}{W}});}
+\DoxyCodeLine{00137\ \ \ \ \ \mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a2e8d50aa82cced7b5bcda6762629692b}{ILI9341\_SetRotation}}(\mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a0af30c01b2937812cad5c3c3d0967264}{SCREEN\_HORIZONTAL\_2}});}
+\DoxyCodeLine{00138\ \ \ \ \ \mbox{\hyperlink{_i_l_i9341___g_f_x_8h_aba070ae5cadf0f3c0574cefd1c4e9fec}{ILI9341\_DrawText}}(\textcolor{stringliteral}{"{}HELLO\ WORLD"{}},\ \mbox{\hyperlink{fonts_8h_aa9226b68040e114aa48cb1e47bc34d70}{FONT4}},\ 90,\ 110,\ \mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_ad567ea9864a3046e47ab69cdc050ecfa}{BL}},\ \mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a649b8f01fd6c0f47ff3cbddaeba63bfb}{W}});}
+\DoxyCodeLine{00139\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_pixel_art_8c_ad8f2bda4936099d7883d5fb888fb44ad_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_pixel_art_8c_a70fbd315df33bf9039e036725b569e7f}\label{_pixel_art_8c_a70fbd315df33bf9039e036725b569e7f}} 
+\index{PixelArt.c@{PixelArt.c}!delay@{delay}}
+\index{delay@{delay}!PixelArt.c@{PixelArt.c}}
+\doxysubsubsection{\texorpdfstring{delay}{delay}}
+{\footnotesize\ttfamily uint8\+\_\+t delay = 115}
+
+
+
+Definition at line \mbox{\hyperlink{_pixel_art_8c_source_l00013}{13}} of file \mbox{\hyperlink{_pixel_art_8c_source}{Pixel\+Art.\+c}}.
+

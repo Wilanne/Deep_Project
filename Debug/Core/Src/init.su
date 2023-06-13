@@ -1,0 +1,7 @@
+init.c:14:6:SystemClock_Config	72	static
+init.c:52:13:MX_SPI1_Init	8	static
+init.c:79:13:MX_GPIO_Init	40	static
+init.c:126:13:MX_USART2_UART_Init	8	static
+init.c:157:13:MX_DMA_Init	16	static
+init.c:178:13:MX_TIM2_Init	64	static
+init.c:236:6:Init_All	8	static

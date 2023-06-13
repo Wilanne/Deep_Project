@@ -1,0 +1,5 @@
+<map id="Effect_Rainbow" name="Effect_Rainbow">
+<area shape="rect" id="node1" title="Perform the Rainbow effect on the LEDs." alt="" coords="5,31,116,57"/>
+<area shape="rect" id="node2" href="$ws2812_8c.html#a8d6329b804987f3dde157bcf7c6c6640" title="Set the color values of a specific LED." alt="" coords="181,5,255,32"/>
+<area shape="rect" id="node3" href="$ws2812_8c.html#a6be227c85ae79c14a68e2358161fd3ea" title="Send the LED data to the WS2812 strip." alt="" coords="164,56,272,83"/>
+</map>

@@ -1,0 +1,15 @@
+<map id="PixelArt_InitScreen" name="PixelArt_InitScreen">
+<area shape="rect" id="node1" title="Initialize the screen for PixelArt." alt="" coords="5,208,138,235"/>
+<area shape="rect" id="node2" href="$_i_l_i9341___s_t_m32___driver_8c.html#a9ca469fff3b2f2814946671aee9ed59e" title=" " alt="" coords="186,56,313,83"/>
+<area shape="rect" id="node9" href="$_i_l_i9341___s_t_m32___driver_8c.html#ad5cdca394aae512e37176b6a30332a68" title=" " alt="" coords="206,208,293,235"/>
+<area shape="rect" id="node12" href="$_i_l_i9341___s_t_m32___driver_8c.html#a2e8d50aa82cced7b5bcda6762629692b" title=" " alt="" coords="372,309,509,336"/>
+<area shape="rect" id="node3" href="$_i_l_i9341___s_t_m32___driver_8c.html#ae66340123bd234083534c5c5ad1b46c4" title=" " alt="" coords="361,56,520,83"/>
+<area shape="rect" id="node4" href="$_i_l_i9341___s_t_m32___driver_8c.html#a9b0cd3a0f195757e172d47d501a0b702" title=" " alt="" coords="372,5,509,32"/>
+<area shape="rect" id="node5" href="$_i_l_i9341___s_t_m32___driver_8c.html#abf0b301d783c8dbcbcd4c1ac05e2fc3e" title=" " alt="" coords="581,5,715,32"/>
+<area shape="rect" id="node7" href="$_i_l_i9341___s_t_m32___driver_8c.html#a32dc1a25dba771348cc10ccb2487cb87" title=" " alt="" coords="568,208,728,235"/>
+<area shape="rect" id="node6" href="$_i_l_i9341___s_t_m32___driver_8c.html#a306447bbf42896dcd0088c50cca7d3dc" title=" " alt="" coords="776,5,920,32"/>
+<area shape="rect" id="node8" href="$_i_l_i9341___s_t_m32___driver_8c.html#a4f7492b508a7741eb188c0eea1971eb2" title=" " alt="" coords="792,233,904,260"/>
+<area shape="rect" id="node10" href="$_i_l_i9341___s_t_m32___driver_8c.html#a7ed4c75ca7b80d6a1dbe74d1ab21fee8" title=" " alt="" coords="386,107,495,133"/>
+<area shape="rect" id="node11" href="$_i_l_i9341___s_t_m32___driver_8c.html#a34a1d81e699c846a16ae1f7e4fac0ec4" title=" " alt="" coords="389,157,492,184"/>
+<area shape="rect" id="node13" href="$_i_l_i9341___s_t_m32___driver_8c.html#a8f7d0dcd7326d2c24f1db1ef7dd3742e" title=" " alt="" coords="584,259,712,285"/>
+</map>

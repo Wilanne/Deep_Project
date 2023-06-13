@@ -1,0 +1,6 @@
+<map id="ILI9341_DrawFilledRectangleCoord" name="ILI9341_DrawFilledRectangleCoord">
+<area shape="rect" id="node1" title="Draws a filled rectangle on the ILI9341 display using coordinate values." alt="" coords="525,5,713,48"/>
+<area shape="rect" id="node2" href="$_pixel_art_8c.html#aead41c310def9f779057e6cee7f077e8" title="Draw a character on the screen." alt="" coords="318,13,477,40"/>
+<area shape="rect" id="node3" href="$_pixel_art_8c.html#ab1502f1ce9060ce7748d17ddd67bb760" title="Animate a sequence of characters on the screen." alt="" coords="103,13,270,40"/>
+<area shape="rect" id="node4" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,13,55,40"/>
+</map>

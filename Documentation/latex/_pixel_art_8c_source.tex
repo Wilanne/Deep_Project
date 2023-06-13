@@ -1,0 +1,110 @@
+\hypertarget{_pixel_art_8c_source}{}\doxysection{Pixel\+Art.\+c}
+\label{_pixel_art_8c_source}\index{Core/Src/PixelArt.c@{Core/Src/PixelArt.c}}
+\mbox{\hyperlink{_pixel_art_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_pixel_art_8h}{PixelArt.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_pixils_8h}{Pixils.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00013}\mbox{\hyperlink{_pixel_art_8c_a70fbd315df33bf9039e036725b569e7f}{00013}}\ uint8\_t\ \mbox{\hyperlink{_pixel_art_8c_a70fbd315df33bf9039e036725b569e7f}{delay}}\ =\ 115;}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00018}\mbox{\hyperlink{_pixel_art_8h_a4ec3ff275a748bfd20f615c277be6ed9}{00018}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_pixel_art_8c_a4ec3ff275a748bfd20f615c277be6ed9}{PixelArt\_InitScreen}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00019}00019\ \ \ \ \ \mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_ad5cdca394aae512e37176b6a30332a68}{ILI9341\_Init}}();}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00020}00020\ \ \ \ \ \mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a9ca469fff3b2f2814946671aee9ed59e}{ILI9341\_FillScreen}}(\mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a8eb0b110eac0a6677168ac68ae6db596}{DGY}});}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00021}00021\ \ \ \ \ \mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a2e8d50aa82cced7b5bcda6762629692b}{ILI9341\_SetRotation}}(\mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_aaf354859347f5ee6496a961c0abf3c96}{SCREEN\_VERTICAL\_1}});}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00022}00022\ \}}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00031}\mbox{\hyperlink{_pixel_art_8h_a16d70057ada8d7853a30c848238fd055}{00031}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_pixel_art_8c_a16d70057ada8d7853a30c848238fd055}{PixelArt\_DrawGrid}}(uint16\_t\ m\_gridColor,\ uint16\_t\ m\_fillColor,\ uint8\_t\ m\_cellSize,\ \textcolor{keywordtype}{float}\ m\_scalFactor)\ \{}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00032}00032\ \ \ \ \ \mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a2e8d50aa82cced7b5bcda6762629692b}{ILI9341\_SetRotation}}(\mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_aaf354859347f5ee6496a961c0abf3c96}{SCREEN\_VERTICAL\_1}});}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00034}00034\ \ \ \ \ uint16\_t\ gridColor\ =\ m\_gridColor;\ \textcolor{comment}{/*\ Specify\ the\ desired\ color\ for\ the\ grid\ */}}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00035}00035\ \ \ \ \ uint16\_t\ fillColor\ =\ m\_fillColor;}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00037}00037\ \ \ \ \ \textcolor{comment}{//\ Define\ the\ size\ of\ each\ cell\ in\ the\ grid}}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00038}00038\ \ \ \ \ uint8\_t\ cellSize\ =\ m\_cellSize;}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00040}00040\ \ \ \ \ \textcolor{keywordflow}{if}\ (m\_scalFactor\ !=\ 0)}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00041}00041\ \ \ \ \ \ \ \ \ cellSize\ =\ (uint8\_t)cellSize\ *\ m\_scalFactor;}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00043}00043\ \ \ \ \ \textcolor{comment}{//\ Define\ the\ position\ of\ the\ grid\ on\ the\ display}}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00044}00044\ \ \ \ \ uint16\_t\ startX\ =\ (\mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a750a9b79acd8b1bd45cc2d8b85c84444}{ILI9341\_SCREEN\_HEIGHT}}\ -\/\ 8\ *\ cellSize)\ /\ 2;}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00045}00045\ \ \ \ \ uint16\_t\ startY\ =\ (\mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_ab3097a8107773b0958e351b195d6fd28}{ILI9341\_SCREEN\_WIDTH}}\ -\/\ 8\ *\ cellSize)\ /\ 2;}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00047}00047\ \ \ \ \ \textcolor{comment}{/*\ Draw\ grid\ only}}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00048}00048\ \textcolor{comment}{\ \ \ \ for\ (uint16\_t\ i\ =\ 0;\ i\ <=\ 8;\ i++)\ \{}}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00049}00049\ \textcolor{comment}{\ \ \ \ \ \ \ \ //\ Draw\ vertical\ lines}}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00050}00050\ \textcolor{comment}{\ \ \ \ \ \ \ \ uint16\_t\ x\ =\ startX\ +\ i\ *\ cellSize;}}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00051}00051\ \textcolor{comment}{\ \ \ \ \ \ \ \ ILI9341\_DrawVLine(x,\ startY,\ 8\ *\ cellSize,\ color);}}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00052}00052\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00053}00053\ \textcolor{comment}{\ \ \ \ \ \ \ \ //\ Draw\ horizontal\ lines}}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00054}00054\ \textcolor{comment}{\ \ \ \ \ \ \ \ uint16\_t\ y\ =\ startY\ +\ i\ *\ cellSize;}}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00055}00055\ \textcolor{comment}{\ \ \ \ \ \ \ \ ILI9341\_DrawHLine(startX,\ y,\ 8\ *\ cellSize,\ color);}}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00056}00056\ \textcolor{comment}{\ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00057}00057\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00059}00059\ \ \ \ \ \textcolor{comment}{/*\ Draw\ the\ grid\ and\ fill}}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00060}00060\ \textcolor{comment}{\ \ \ \ for\ (uint16\_t\ i\ =\ 0;\ i\ <\ 8;\ i++)\ \{}}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00061}00061\ \textcolor{comment}{\ \ \ \ \ \ \ \ for\ (uint16\_t\ j\ =\ 0;\ j\ <\ 8;\ j++)\ \{}}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00062}00062\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ //\ Calculate\ the\ position\ and\ dimensions\ of\ each\ rectangle}}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00063}00063\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ uint16\_t\ x\ =\ startX\ +\ i\ *\ cellSize;}}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00064}00064\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ uint16\_t\ y\ =\ startY\ +\ j\ *\ cellSize;}}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00065}00065\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ uint16\_t\ width\ =\ cellSize;}}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00066}00066\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ uint16\_t\ height\ =\ cellSize;}}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00067}00067\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00068}00068\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ //\ Draw\ the\ grid\ lines\ on\ top\ of\ the\ filled\ rectangles}}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00069}00069\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ ILI9341\_DrawRectangle(x,\ y,\ width,\ height,\ gridColor);}}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00070}00070\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00071}00071\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ //\ Fill\ each\ rectangle\ with\ the\ specified\ fill\ color}}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00072}00072\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ ILI9341\_DrawFilledRectangleCoord(x,\ y,\ x\ +\ width\ -\/\ 1V\ thickness,\ y\ +\ height\ -\/\ 1H\ thickness,\ fillColor);}}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00073}00073\ \textcolor{comment}{\ \ \ \ \ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00074}00074\ \textcolor{comment}{\ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00075}00075\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00076}00076\ \}}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00085}\mbox{\hyperlink{_pixel_art_8h_a46aca8bb92b8f0317c4967e16a895c18}{00085}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_pixel_art_8c_aead41c310def9f779057e6cee7f077e8}{PixelArt\_DrawCharacter}}(\mbox{\hyperlink{structcharacter_pixels8__8}{characterPixels8\_8}}\ character,\ uint8\_t\ m\_cellSize,\ uint8\_t\ m\_borderSpace,\ \textcolor{keywordtype}{float}\ m\_scalFactor)\ \{}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00086}00086\ \ \ \ \ \textcolor{comment}{//\ if\ grid\ 0\ ||\ 1\ ifndef\ ...}}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00088}00088\ \ \ \ \ \textcolor{comment}{//\ Define\ the\ size\ of\ each\ cell\ in\ the\ grid}}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00089}00089\ \ \ \ \ uint8\_t\ cellSize\ =\ m\_cellSize;}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00091}00091\ \ \ \ \ uint8\_t\ width\ =\ cellSize;}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00092}00092\ \ \ \ \ uint8\_t\ height\ =\ cellSize;}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00094}00094\ \ \ \ \ \textcolor{comment}{//\ Scale\ the\ model\ according\ to\ a\ scale\ ratio}}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00095}00095\ \ \ \ \ \textcolor{keywordflow}{if}\ (m\_scalFactor\ !=\ 0)}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00096}00096\ \ \ \ \ \ \ \ \ cellSize\ =\ (uint8\_t)cellSize\ *\ m\_scalFactor;}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00098}00098\ \ \ \ \ \textcolor{comment}{//\ Define\ the\ position\ of\ the\ grid\ on\ the\ display}}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00099}00099\ \ \ \ \ uint16\_t\ startX\ =\ (\mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a750a9b79acd8b1bd45cc2d8b85c84444}{ILI9341\_SCREEN\_HEIGHT}}\ -\/\ 8\ *\ cellSize)\ /\ 2;}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00100}00100\ \ \ \ \ uint16\_t\ startY\ =\ (\mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_ab3097a8107773b0958e351b195d6fd28}{ILI9341\_SCREEN\_WIDTH}}\ -\/\ 8\ *\ cellSize)\ /\ 2;}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00102}00102\ \ \ \ \ \textcolor{comment}{//\ Draw\ the\ character}}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00103}00103\ \ \ \ \ \textcolor{keywordflow}{for}\ (uint16\_t\ i\ =\ 0;\ i\ <\ 8;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00104}00104\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (uint16\_t\ j\ =\ 0;\ j\ <\ 8;\ j++)\ \{}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Calculate\ the\ position\ and\ dimensions\ of\ each\ rectangle}}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ uint16\_t\ x\ =\ startX\ +\ i\ *\ cellSize;}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ uint16\_t\ y\ =\ startY\ +\ j\ *\ cellSize;}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00108}00108\ }
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Fill\ each\ rectangle\ with\ the\ specified\ color}}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ uint16\_t\ color\ =\ character.\mbox{\hyperlink{structcharacter_pixels8__8_a18f01baaad513eca35bac8b199c18e65}{pixels}}[i][j];}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_i_l_i9341___g_f_x_8h_a5a03b6a087c9dab0d183311980c0fc08}{ILI9341\_DrawFilledRectangleCoord}}(x,\ y,\ x\ +\ width\ -\/\ m\_borderSpace,\ y\ +\ height\ -\/\ m\_borderSpace,\ color);}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00112}00112\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00113}00113\ \ \ \ \ \ \ \ \ HAL\_Delay(100);}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00114}00114\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00115}00115\ \}}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00116}00116\ }
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00124}\mbox{\hyperlink{_pixel_art_8h_a19825e266d9ff5522ef14e32a7faa86f}{00124}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_pixel_art_8c_ab1502f1ce9060ce7748d17ddd67bb760}{PixelArt\_AnimeCharacter}}(\mbox{\hyperlink{structcharacter_pixels8__8}{characterPixels8\_8}}\ character[4],\ uint8\_t\ m\_cellSize,\ uint8\_t\ m\_borderSpace,\ \textcolor{keywordtype}{float}\ m\_scalFactor)\ \{}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00125}00125\ \ \ \ \ \textcolor{keywordflow}{for}\ (uint8\_t\ i\ =\ 0;\ i\ <\ 4;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00126}00126\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_pixel_art_8c_aead41c310def9f779057e6cee7f077e8}{PixelArt\_DrawCharacter}}(character[i],\ m\_cellSize,\ m\_borderSpace,\ m\_scalFactor);}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00127}00127\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ animation\ speed}}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00128}00128\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00129}00129\ \}}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00130}00130\ }
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00134}\mbox{\hyperlink{_pixel_art_8h_ad8f2bda4936099d7883d5fb888fb44ad}{00134}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_pixel_art_8c_ad8f2bda4936099d7883d5fb888fb44ad}{PixelArt\_ScreenTest}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00135}00135\ \ \ \ \ \mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_ad5cdca394aae512e37176b6a30332a68}{ILI9341\_Init}}();}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00136}00136\ \ \ \ \ \mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a9ca469fff3b2f2814946671aee9ed59e}{ILI9341\_FillScreen}}(\mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a649b8f01fd6c0f47ff3cbddaeba63bfb}{W}});}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00137}00137\ \ \ \ \ \mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a2e8d50aa82cced7b5bcda6762629692b}{ILI9341\_SetRotation}}(\mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a0af30c01b2937812cad5c3c3d0967264}{SCREEN\_HORIZONTAL\_2}});}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00138}00138\ \ \ \ \ \mbox{\hyperlink{_i_l_i9341___g_f_x_8h_aba070ae5cadf0f3c0574cefd1c4e9fec}{ILI9341\_DrawText}}(\textcolor{stringliteral}{"{}HELLO\ WORLD"{}},\ \mbox{\hyperlink{fonts_8h_aa9226b68040e114aa48cb1e47bc34d70}{FONT4}},\ 90,\ 110,\ \mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_ad567ea9864a3046e47ab69cdc050ecfa}{BL}},\ \mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a649b8f01fd6c0f47ff3cbddaeba63bfb}{W}});}
+\DoxyCodeLine{\Hypertarget{_pixel_art_8c_source_l00139}00139\ \}}
+
+\end{DoxyCode}

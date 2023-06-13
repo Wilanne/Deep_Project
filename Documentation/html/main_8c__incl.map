@@ -1,0 +1,13 @@
+<map id="Core/Src/main.c" name="Core/Src/main.c">
+<area shape="rect" id="node1" title=": Main program body" alt="" coords="300,5,415,32"/>
+<area shape="rect" id="node2" href="$main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="446,304,506,331"/>
+<area shape="rect" id="node4" href="$init_8h.html" title=" " alt="" coords="397,229,446,256"/>
+<area shape="rect" id="node5" href="$ws2812_8h.html" title=": WS2812 Leds Lib Header" alt="" coords="319,155,396,181"/>
+<area shape="rect" id="node6" href="$_pixils_8h.html" title=" " alt="" coords="51,155,115,181"/>
+<area shape="rect" id="node8" href="$_pixel_art_8h.html" title=" " alt="" coords="204,80,282,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="299,379,416,405"/>
+<area shape="rect" id="node7" href="$_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h.html" title=" " alt="" coords="5,229,182,256"/>
+<area shape="rect" id="node9" href="$_i_l_i9341___g_f_x_8h.html" title=" " alt="" coords="190,155,296,181"/>
+<area shape="rect" id="node10" href="$fonts_8h.html" title=" " alt="" coords="258,229,318,256"/>
+<area shape="rect" id="node11" title=" " alt="" coords="256,304,320,331"/>
+</map>

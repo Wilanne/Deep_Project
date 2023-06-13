@@ -1,0 +1,11 @@
+<map id="Init_All" name="Init_All">
+<area shape="rect" id="node1" title="Initializes all the peripherals." alt="" coords="5,132,66,159"/>
+<area shape="rect" id="node2" href="$init_8c.html#a608dc9e9bcaf978f1611f3ec57670f64" title=" " alt="" coords="145,5,244,32"/>
+<area shape="rect" id="node3" href="$init_8c.html#ae89fdd15729ad41a66911190fcbab23a" title="GPIO Initialization Function." alt="" coords="143,56,246,83"/>
+<area shape="rect" id="node4" href="$init_8c.html#a28dbf2494083ac5f39daa87bf09e4eb3" title="SPI init." alt="" coords="145,107,244,133"/>
+<area shape="rect" id="node6" href="$init_8c.html#af952250b2d49718b385e14a76fa7c1b8" title="TIM2 Initialization Function." alt="" coords="145,259,244,285"/>
+<area shape="rect" id="node8" href="$init_8c.html#a6db1014d713f6f5c0f52a13299ee0733" title="USART2 Initialization Function." alt="" coords="114,157,275,184"/>
+<area shape="rect" id="node9" href="$init_8c.html#a70af21c671abfcc773614a9a4f63d920" title="Configures the system clock." alt="" coords="123,208,266,235"/>
+<area shape="rect" id="node5" href="$main_8c.html#a1730ffe1e560465665eb47d9264826f9" title=" " alt="" coords="348,183,448,209"/>
+<area shape="rect" id="node7" href="$stm32f1xx__hal__msp_8c.html#ae70bce6c39d0b570a7523b86738cec4b" title=" " alt="" coords="323,259,473,285"/>
+</map>

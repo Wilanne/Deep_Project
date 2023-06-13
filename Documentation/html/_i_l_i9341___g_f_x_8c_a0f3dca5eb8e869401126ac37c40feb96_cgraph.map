@@ -1,0 +1,12 @@
+<map id="ILI9341_DrawHollowRectangleCoord" name="ILI9341_DrawHollowRectangleCoord">
+<area shape="rect" id="node1" title="Draws a hollow rectangle on the ILI9341 display using coordinate values." alt="" coords="5,48,200,91"/>
+<area shape="rect" id="node2" href="$_i_l_i9341___s_t_m32___driver_8c.html#a9ccb3fd050b072015a11a9e9e5a0e4d1" title=" " alt="" coords="248,56,379,83"/>
+<area shape="rect" id="node9" href="$_i_l_i9341___s_t_m32___driver_8c.html#a691f1e59bdcce40b8307538de50c35a0" title=" " alt="" coords="443,107,570,133"/>
+<area shape="rect" id="node10" href="$_i_l_i9341___s_t_m32___driver_8c.html#ae2356e95cb42f0250c717e115c09ead3" title=" " alt="" coords="248,5,379,32"/>
+<area shape="rect" id="node3" href="$_i_l_i9341___s_t_m32___driver_8c.html#ae66340123bd234083534c5c5ad1b46c4" title=" " alt="" coords="427,56,586,83"/>
+<area shape="rect" id="node4" href="$_i_l_i9341___s_t_m32___driver_8c.html#a9b0cd3a0f195757e172d47d501a0b702" title=" " alt="" coords="438,5,575,32"/>
+<area shape="rect" id="node5" href="$_i_l_i9341___s_t_m32___driver_8c.html#abf0b301d783c8dbcbcd4c1ac05e2fc3e" title=" " alt="" coords="647,19,781,45"/>
+<area shape="rect" id="node7" href="$_i_l_i9341___s_t_m32___driver_8c.html#a32dc1a25dba771348cc10ccb2487cb87" title=" " alt="" coords="634,81,794,108"/>
+<area shape="rect" id="node6" href="$_i_l_i9341___s_t_m32___driver_8c.html#a306447bbf42896dcd0088c50cca7d3dc" title=" " alt="" coords="842,19,986,45"/>
+<area shape="rect" id="node8" href="$_i_l_i9341___s_t_m32___driver_8c.html#a4f7492b508a7741eb188c0eea1971eb2" title=" " alt="" coords="858,81,970,108"/>
+</map>

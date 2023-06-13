@@ -1,12 +1,17 @@
-/*
- * Pixils.c
+/**
+ * @file Pixils.c
  *
- *  Created on: 11 mai 2023
- *      Author: leoau
+ * @brief This file contains the definition of images pixels data
+ *
+ * @date 11 mai 2023
+ * @author leoau
  */
 
 #include "Pixils.h"
 
+/**
+ * @brief This structure contain all the 4th Wizard sprites using ILI9341 Color
+ */
 characterPixels8_8 Wizard[4] = {
     {
         .pixels = {

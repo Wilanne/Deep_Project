@@ -1,0 +1,9 @@
+<map id="ILI9341_DrawPixel" name="ILI9341_DrawPixel">
+<area shape="rect" id="node1" title=" " alt="" coords="607,81,735,108"/>
+<area shape="rect" id="node2" href="$_i_l_i9341___g_f_x_8c.html#a0bacfeb8d032f6addc1152a651a4c7c8" title="Draws a character on the ILI9341 display." alt="" coords="400,5,525,32"/>
+<area shape="rect" id="node5" href="$_i_l_i9341___g_f_x_8c.html#ac9f0ddd8eff4e75f3747ccd7fc0c4e53" title="Draws a filled circle on the ILI9341 display." alt="" coords="381,56,543,83"/>
+<area shape="rect" id="node6" href="$_i_l_i9341___g_f_x_8c.html#ad13c01eb4ed64b1466288dcb817939ae" title="Draws a hollow circle on the ILI9341 display." alt="" coords="378,107,547,133"/>
+<area shape="rect" id="node7" href="$_i_l_i9341___g_f_x_8c.html#a0f3dca5eb8e869401126ac37c40feb96" title="Draws a hollow rectangle on the ILI9341 display using coordinate values." alt="" coords="365,157,559,200"/>
+<area shape="rect" id="node3" href="$_i_l_i9341___g_f_x_8c.html#aba070ae5cadf0f3c0574cefd1c4e9fec" title="Draws a text string on the ILI9341 display." alt="" coords="194,5,317,32"/>
+<area shape="rect" id="node4" href="$_pixel_art_8c.html#ad8f2bda4936099d7883d5fb888fb44ad" title="Perform a screen test by filling the screen with a color and displaying text." alt="" coords="5,5,146,32"/>
+</map>

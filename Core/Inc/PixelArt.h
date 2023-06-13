@@ -13,6 +13,7 @@
 #include "ILI9341_GFX.h"
 #include "Pixils.h"
 
+// Library methods
 void PixelArt_InitScreen();
 void PixelArt_DrawGrid(uint16_t m_gridColor, uint16_t m_fillColor, uint8_t m_cellSize, float m_scalFactor);
 void PixelArt_DrawCharacter(characterPixels8_8 character, uint8_t m_cellSize, uint8_t borderSpace, float m_scalFactor);

@@ -1,0 +1,31 @@
+\hypertarget{_i_l_i9341___g_f_x_8h_source}{}\doxysection{ILI9341\+\_\+\+GFX.\+h}
+\label{_i_l_i9341___g_f_x_8h_source}\index{Core/Inc/ILI9341\_GFX.h@{Core/Inc/ILI9341\_GFX.h}}
+\mbox{\hyperlink{_i_l_i9341___g_f_x_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_i_l_i9341___g_f_x_8h_source_l00001}00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_i_l_i9341___g_f_x_8h_source_l00002}00002\ \textcolor{comment}{\ *\ ILI\_GFX.h}}
+\DoxyCodeLine{\Hypertarget{_i_l_i9341___g_f_x_8h_source_l00003}00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{_i_l_i9341___g_f_x_8h_source_l00004}00004\ \textcolor{comment}{\ *\ \ Created\ on:\ 5\ mai\ 2023}}
+\DoxyCodeLine{\Hypertarget{_i_l_i9341___g_f_x_8h_source_l00005}00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ leoau}}
+\DoxyCodeLine{\Hypertarget{_i_l_i9341___g_f_x_8h_source_l00006}00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{_i_l_i9341___g_f_x_8h_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_i_l_i9341___g_f_x_8h_source_l00008}00008\ \textcolor{preprocessor}{\#ifndef\ INC\_ILI9341\_GFX\_H\_}}
+\DoxyCodeLine{\Hypertarget{_i_l_i9341___g_f_x_8h_source_l00009}00009\ \textcolor{preprocessor}{\#define\ INC\_ILI9341\_GFX\_H\_}}
+\DoxyCodeLine{\Hypertarget{_i_l_i9341___g_f_x_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{_i_l_i9341___g_f_x_8h_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}stm32f1xx\_hal.h"{}}}
+\DoxyCodeLine{\Hypertarget{_i_l_i9341___g_f_x_8h_source_l00012}00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{fonts_8h}{fonts.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_i_l_i9341___g_f_x_8h_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{_i_l_i9341___g_f_x_8h_source_l00014}\mbox{\hyperlink{_i_l_i9341___g_f_x_8h_aa482c5a61f58f9b376fc7d408a91a3c3}{00014}}\ \textcolor{preprocessor}{\#define\ HORIZONTAL\_IMAGE\ \ \ \ 0}}
+\DoxyCodeLine{\Hypertarget{_i_l_i9341___g_f_x_8h_source_l00015}\mbox{\hyperlink{_i_l_i9341___g_f_x_8h_ad6918751f958a5ee563dd4ff4e071b48}{00015}}\ \textcolor{preprocessor}{\#define\ VERTICAL\_IMAGE\ \ \ \ \ \ 1}}
+\DoxyCodeLine{\Hypertarget{_i_l_i9341___g_f_x_8h_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_i_l_i9341___g_f_x_8h_source_l00017}00017\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_i_l_i9341___g_f_x_8h_ad13c01eb4ed64b1466288dcb817939ae}{ILI9341\_DrawHollowCircle}}(uint16\_t\ X,\ uint16\_t\ Y,\ uint16\_t\ radius,\ uint16\_t\ color);}
+\DoxyCodeLine{\Hypertarget{_i_l_i9341___g_f_x_8h_source_l00018}00018\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_i_l_i9341___g_f_x_8h_ac9f0ddd8eff4e75f3747ccd7fc0c4e53}{ILI9341\_DrawFilledCircle}}(uint16\_t\ X,\ uint16\_t\ Y,\ uint16\_t\ radius,\ uint16\_t\ color);}
+\DoxyCodeLine{\Hypertarget{_i_l_i9341___g_f_x_8h_source_l00019}00019\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_i_l_i9341___g_f_x_8h_a0f3dca5eb8e869401126ac37c40feb96}{ILI9341\_DrawHollowRectangleCoord}}(uint16\_t\ X0,\ uint16\_t\ Y0,\ uint16\_t\ X1,\ uint16\_t\ Y1,\ uint16\_t\ color);}
+\DoxyCodeLine{\Hypertarget{_i_l_i9341___g_f_x_8h_source_l00020}00020\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_i_l_i9341___g_f_x_8h_a5a03b6a087c9dab0d183311980c0fc08}{ILI9341\_DrawFilledRectangleCoord}}(uint16\_t\ X0,\ uint16\_t\ Y0,\ uint16\_t\ X1,\ uint16\_t\ Y1,\ uint16\_t\ color);}
+\DoxyCodeLine{\Hypertarget{_i_l_i9341___g_f_x_8h_source_l00021}00021\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_i_l_i9341___g_f_x_8h_a0bacfeb8d032f6addc1152a651a4c7c8}{ILI9341\_DrawChar}}(\textcolor{keywordtype}{char}\ ch,\ \textcolor{keyword}{const}\ uint8\_t\ font[],\ uint16\_t\ X,\ uint16\_t\ Y,\ uint16\_t\ color,\ uint16\_t\ bgcolor);}
+\DoxyCodeLine{\Hypertarget{_i_l_i9341___g_f_x_8h_source_l00022}00022\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_i_l_i9341___g_f_x_8h_aba070ae5cadf0f3c0574cefd1c4e9fec}{ILI9341\_DrawText}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ str,\ \textcolor{keyword}{const}\ uint8\_t\ font[],\ uint16\_t\ X,\ uint16\_t\ Y,\ uint16\_t\ color,\ uint16\_t\ bgcolor);}
+\DoxyCodeLine{\Hypertarget{_i_l_i9341___g_f_x_8h_source_l00023}00023\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_i_l_i9341___g_f_x_8h_a2d9ee49f127dc7cb4c8d8df77bcd4acb}{ILI9341\_DrawImage}}(\textcolor{keyword}{const}\ uint8\_t*\ image,\ uint8\_t\ orientation);}
+\DoxyCodeLine{\Hypertarget{_i_l_i9341___g_f_x_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_i_l_i9341___g_f_x_8h_source_l00025}00025\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ INC\_ILI9341\_GFX\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

@@ -1,0 +1,9 @@
+<map id="Core/Inc/init.h" name="Core/Inc/init.h">
+<area shape="rect" id="node1" title=" " alt="" coords="352,5,453,32"/>
+<area shape="rect" id="node2" href="$ws2812_8h.html" title=": WS2812 Leds Lib Header" alt="" coords="185,80,314,107"/>
+<area shape="rect" id="node5" href="$main_8c.html" title=": Main program body" alt="" coords="162,229,278,256"/>
+<area shape="rect" id="node7" href="$init_8c.html" title="This file the function to init all the hardware component." alt="" coords="440,80,544,107"/>
+<area shape="rect" id="node3" href="$_pixel_art_8h.html" title=" " alt="" coords="30,155,160,181"/>
+<area shape="rect" id="node6" href="$ws2812_8c.html" title=": WS2812 Leds Lib Sources" alt="" coords="234,155,366,181"/>
+<area shape="rect" id="node4" href="$_pixel_art_8c.html" title="This file contains the definition of all the PixelArt function." alt="" coords="5,229,139,256"/>
+</map>

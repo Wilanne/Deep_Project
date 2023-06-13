@@ -1,0 +1,102 @@
+\hypertarget{ws2812_8c_source}{}\doxysection{ws2812.\+c}
+\label{ws2812_8c_source}\index{Core/Src/ws2812.c@{Core/Src/ws2812.c}}
+\mbox{\hyperlink{ws2812_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ws2812_8h}{ws2812.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00016}\mbox{\hyperlink{ws2812_8h_a07e5fc4d223b16bec2fd6bed547cf91d}{00016}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ws2812_8c_a07e5fc4d223b16bec2fd6bed547cf91d}{HAL\_TIM\_PWM\_PulseFinishedCallback}}(TIM\_HandleTypeDef\ *htim)}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00017}00017\ \{}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00018}00018\ \ \ \ \ HAL\_TIM\_PWM\_Stop\_DMA(\&\mbox{\hyperlink{init_8h_a2c80fd5510e2990a59a5c90d745c716c}{htim2}},\ TIM\_CHANNEL\_1);}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00019}00019\ \ \ \ \ \mbox{\hyperlink{ws2812_8h_a4f968481ec4571ce2675eae2e4475136}{datasentflag}}=1;}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00020}00020\ \}}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00030}\mbox{\hyperlink{ws2812_8h_a8d6329b804987f3dde157bcf7c6c6640}{00030}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ws2812_8c_a8d6329b804987f3dde157bcf7c6c6640}{Set\_LED}}\ (\textcolor{keywordtype}{int}\ LEDnum,\ \textcolor{keywordtype}{int}\ Red,\ \textcolor{keywordtype}{int}\ Green,\ \textcolor{keywordtype}{int}\ Blue)}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00031}00031\ \{}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00032}00032\ \ \ \ \ \mbox{\hyperlink{ws2812_8h_a5ea7e5d31711bd4cbe5cec18527015cb}{LED\_Data}}[LEDnum].\mbox{\hyperlink{struct_r_g_b__color__t_a860c0e35189a05c861dcfaf00f8051f3}{count}}\ =\ LEDnum;}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00033}00033\ \ \ \ \ \mbox{\hyperlink{ws2812_8h_a5ea7e5d31711bd4cbe5cec18527015cb}{LED\_Data}}[LEDnum].\mbox{\hyperlink{struct_r_g_b__color__t_ada2349630f10ed23b455beb4c68e4650}{green}}\ =\ Green;}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00034}00034\ \ \ \ \ \mbox{\hyperlink{ws2812_8h_a5ea7e5d31711bd4cbe5cec18527015cb}{LED\_Data}}[LEDnum].\mbox{\hyperlink{struct_r_g_b__color__t_a86b4b7f3a3171987b89f7f85e1d3c037}{red}}\ =\ Red;}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00035}00035\ \ \ \ \ \mbox{\hyperlink{ws2812_8h_a5ea7e5d31711bd4cbe5cec18527015cb}{LED\_Data}}[LEDnum].\mbox{\hyperlink{struct_r_g_b__color__t_a8385ba26469d719c031a8ac9d130be41}{blue}}\ =\ Blue;}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00036}00036\ \}}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00043}\mbox{\hyperlink{ws2812_8h_af4afcf37584b66e28753eab349ade16c}{00043}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ws2812_8c_af4afcf37584b66e28753eab349ade16c}{Set\_Brightness}}\ (\textcolor{keywordtype}{int}\ brightness)\ \ \textcolor{comment}{//\ 0-\/45}}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00044}00044\ \{}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00045}00045\ \textcolor{preprocessor}{\#if\ USE\_BRIGHTNESS}}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00047}00047\ \ \ \ \ \textcolor{keywordflow}{if}\ (brightness\ >\ 45)\ brightness\ =\ 45;}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00048}00048\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=0;\ i<\mbox{\hyperlink{ws2812_8h_a73f7eec19bbf7b2b9199b8ff277bc980}{MAX\_LED}};\ i++)}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00049}00049\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00050}00050\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ws2812_8h_aa78e8f96ca702ac160c3e777c0b67e07}{LED\_Mod}}[i].\mbox{\hyperlink{struct_r_g_b__color__t_a860c0e35189a05c861dcfaf00f8051f3}{count}}\ =\ \mbox{\hyperlink{ws2812_8h_a5ea7e5d31711bd4cbe5cec18527015cb}{LED\_Data}}[i].\mbox{\hyperlink{struct_r_g_b__color__t_a860c0e35189a05c861dcfaf00f8051f3}{count}};}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j=1;\ j<4;\ j++)}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00052}00052\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ angle\ =\ 90-\/brightness;\ \ \textcolor{comment}{//\ in\ degrees}}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ angle\ =\ angle*\mbox{\hyperlink{ws2812_8h_a598a3330b3c21701223ee0ca14316eca}{PI}}\ /\ 180;\ \ \textcolor{comment}{//\ in\ rad}}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ws2812_8h_aa78e8f96ca702ac160c3e777c0b67e07}{LED\_Mod}}[i].\mbox{\hyperlink{struct_r_g_b__color__t_ada2349630f10ed23b455beb4c68e4650}{green}}\ =\ (\mbox{\hyperlink{ws2812_8h_a5ea7e5d31711bd4cbe5cec18527015cb}{LED\_Data}}[i].\mbox{\hyperlink{struct_r_g_b__color__t_ada2349630f10ed23b455beb4c68e4650}{green}})/(tan(angle));}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ws2812_8h_aa78e8f96ca702ac160c3e777c0b67e07}{LED\_Mod}}[i].\mbox{\hyperlink{struct_r_g_b__color__t_a86b4b7f3a3171987b89f7f85e1d3c037}{red}}\ =\ (\mbox{\hyperlink{ws2812_8h_a5ea7e5d31711bd4cbe5cec18527015cb}{LED\_Data}}[i].\mbox{\hyperlink{struct_r_g_b__color__t_a86b4b7f3a3171987b89f7f85e1d3c037}{red}})/(tan(angle));}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ws2812_8h_aa78e8f96ca702ac160c3e777c0b67e07}{LED\_Mod}}[i].\mbox{\hyperlink{struct_r_g_b__color__t_a8385ba26469d719c031a8ac9d130be41}{blue}}\ =\ (\mbox{\hyperlink{ws2812_8h_a5ea7e5d31711bd4cbe5cec18527015cb}{LED\_Data}}[i].\mbox{\hyperlink{struct_r_g_b__color__t_a8385ba26469d719c031a8ac9d130be41}{blue}})/(tan(angle));}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00058}00058\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00059}00059\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00061}00061\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00062}00062\ \}}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00067}\mbox{\hyperlink{ws2812_8h_a6be227c85ae79c14a68e2358161fd3ea}{00067}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ws2812_8c_a6be227c85ae79c14a68e2358161fd3ea}{WS2812\_Send}}\ (\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00068}00068\ \{}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00069}00069\ \ \ \ \ uint32\_t\ indx=0;}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00070}00070\ \ \ \ \ uint32\_t\ color;}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00072}00072\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=\ 0;\ i<\mbox{\hyperlink{ws2812_8h_a73f7eec19bbf7b2b9199b8ff277bc980}{MAX\_LED}};\ i++)}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00073}00073\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00074}00074\ \textcolor{preprocessor}{\#if\ USE\_BRIGHTNESS}}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00075}00075\ \ \ \ \ \ \ \ \ color\ =\ ((\mbox{\hyperlink{ws2812_8h_aa78e8f96ca702ac160c3e777c0b67e07}{LED\_Mod}}[i].\mbox{\hyperlink{struct_r_g_b__color__t_ada2349630f10ed23b455beb4c68e4650}{green}}<<16)\ |\ (\mbox{\hyperlink{ws2812_8h_aa78e8f96ca702ac160c3e777c0b67e07}{LED\_Mod}}[i].red<<8)\ |\ (\mbox{\hyperlink{ws2812_8h_aa78e8f96ca702ac160c3e777c0b67e07}{LED\_Mod}}[i].\mbox{\hyperlink{struct_r_g_b__color__t_a8385ba26469d719c031a8ac9d130be41}{blue}}));}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00076}00076\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00077}00077\ \ \ \ \ \ \ \ \ color\ =\ ((\mbox{\hyperlink{ws2812_8h_a5ea7e5d31711bd4cbe5cec18527015cb}{LED\_Data}}[i].\mbox{\hyperlink{struct_r_g_b__color__t_ada2349630f10ed23b455beb4c68e4650}{green}}<<16)\ |\ (\mbox{\hyperlink{ws2812_8h_a5ea7e5d31711bd4cbe5cec18527015cb}{LED\_Data}}[i].red<<8)\ |\ (\mbox{\hyperlink{ws2812_8h_a5ea7e5d31711bd4cbe5cec18527015cb}{LED\_Data}}[i].\mbox{\hyperlink{struct_r_g_b__color__t_a8385ba26469d719c031a8ac9d130be41}{blue}}));}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00078}00078\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00080}00080\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=23;\ i>=0;\ i-\/-\/)}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00081}00081\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (color\&(1<<i))}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ws2812_8h_a8d73a991ec74fa638c920d3439421b02}{pwmData}}[indx]\ =\ 60;\ \ \textcolor{comment}{//\ 2/3\ of\ 90}}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ws2812_8h_a8d73a991ec74fa638c920d3439421b02}{pwmData}}[indx]\ =\ 30;\ \ \textcolor{comment}{//\ 1/3\ of\ 90}}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ indx++;}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00092}00092\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00093}00093\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00095}00095\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=0;\ i<50;\ i++)}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00096}00096\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00097}00097\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ws2812_8h_a8d73a991ec74fa638c920d3439421b02}{pwmData}}[indx]\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00098}00098\ \ \ \ \ \ \ \ \ indx++;}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00099}00099\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00100}00100\ }
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00101}00101\ \ \ \ \ HAL\_TIM\_PWM\_Start\_DMA(\&\mbox{\hyperlink{init_8h_a2c80fd5510e2990a59a5c90d745c716c}{htim2}},\ TIM\_CHANNEL\_1,\ (uint32\_t\ *)\mbox{\hyperlink{ws2812_8h_a8d73a991ec74fa638c920d3439421b02}{pwmData}},\ indx);}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00102}00102\ \ \ \ \ \textcolor{keywordflow}{while}\ (!\mbox{\hyperlink{ws2812_8h_a4f968481ec4571ce2675eae2e4475136}{datasentflag}})\{\};}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00103}00103\ \ \ \ \ \mbox{\hyperlink{ws2812_8h_a4f968481ec4571ce2675eae2e4475136}{datasentflag}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00104}00104\ \}}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00105}00105\ }
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00109}\mbox{\hyperlink{ws2812_8h_a6d32a890a085c5c29c1efb3edfb7f617}{00109}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ws2812_8c_a6d32a890a085c5c29c1efb3edfb7f617}{Effect\_Rainbow}}(\textcolor{keywordtype}{void})\ \{}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00110}00110\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{ws2812_8h_a73f7eec19bbf7b2b9199b8ff277bc980}{MAX\_LED}};\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00111}00111\ }
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00112}00112\ }
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00113}00113\ \ \ \ \ \textcolor{comment}{//\ Calculate\ the\ color\ based\ on\ the\ rainbow\ index}}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ red,\ green,\ blue;}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ hue\ =\ \mbox{\hyperlink{ws2812_8h_ad56d1be63a043ca673755eefc32b3933}{rainbow\_index}}\ +\ i\ *\ \mbox{\hyperlink{ws2812_8h_a3fa4f5a545e7b55746d698b59c8dba5b}{RAINBOW\_STEP}};}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ red\ =\ sin(hue\ *\ 3.14159\ /\ 128\ +\ 0)\ *\ 127\ +\ 128;}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ green\ =\ sin(hue\ *\ 3.14159\ /\ 128\ +\ 2)\ *\ 127\ +\ 128;}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ blue\ =\ sin(hue\ *\ 3.14159\ /\ 128\ +\ 4)\ *\ 127\ +\ 128;}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ws2812_8c_a8d6329b804987f3dde157bcf7c6c6640}{Set\_LED}}(i,\ red,\ green,\ blue);}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00120}00120\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00121}00121\ }
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00122}00122\ \ \ \ \ \textcolor{comment}{//\ Send\ the\ updated\ LED\ buffer\ to\ the\ strip}}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00123}00123\ \ \ \ \ \mbox{\hyperlink{ws2812_8c_a6be227c85ae79c14a68e2358161fd3ea}{WS2812\_Send}}();}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00124}00124\ }
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00125}00125\ \ \ \ \ \textcolor{comment}{//\ Increment\ the\ rainbow\ index\ for\ the\ next\ frame}}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00126}00126\ \ \ \ \ \mbox{\hyperlink{ws2812_8h_ad56d1be63a043ca673755eefc32b3933}{rainbow\_index}}++;}
+\DoxyCodeLine{\Hypertarget{ws2812_8c_source_l00127}00127\ \}}
+
+\end{DoxyCode}

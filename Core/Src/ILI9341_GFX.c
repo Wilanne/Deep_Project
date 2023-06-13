@@ -1,22 +1,22 @@
-/*
- * ILI9341_GFX.c
+/**
+ * @file ILI9341_GFX.c
  *
- *  Created on: May 5, 2023
- *      Author: leoau
+ * @brief This file contains the definition of all the ILI9341 Graphic function
+ *
+ * @date 11 mai 2023
+ * @author leoau
  */
-
 
 #include "ILI9341_STM32_Driver.h"
 #include "ILI9341_GFX.h"
 
-/* imprecise small delay
-__STATIC_INLINE void DelayUs(volatile uint32_t us)
-{
-	us *= (SystemCoreClock / 1000000);
-	while (us--);
-}
-*/
-
+/**
+ * @brief Draws a hollow circle on the ILI9341 display.
+ * @param X The X-coordinate of the center of the circle.
+ * @param Y The Y-coordinate of the center of the circle.
+ * @param radius The radius of the circle.
+ * @param color The color of the circle.
+ */
 void ILI9341_DrawHollowCircle(uint16_t X, uint16_t Y, uint16_t radius, uint16_t color)
 {
 	int x = radius-1;
@@ -52,6 +52,13 @@ void ILI9341_DrawHollowCircle(uint16_t X, uint16_t Y, uint16_t radius, uint16_t 
 	}
 }
 
+/**
+ * @brief Draws a filled circle on the ILI9341 display.
+ * @param X The X-coordinate of the center of the circle.
+ * @param Y The Y-coordinate of the center of the circle.
+ * @param radius The radius of the circle.
+ * @param color The color of the circle.
+ */
 void ILI9341_DrawFilledCircle(uint16_t X, uint16_t Y, uint16_t radius, uint16_t color)
 {
 
@@ -88,6 +95,14 @@ void ILI9341_DrawFilledCircle(uint16_t X, uint16_t Y, uint16_t radius, uint16_t 
 	}
 }
 
+/**
+ * @brief Draws a hollow rectangle on the ILI9341 display using coordinate values.
+ * @param X0 The X-coordinate of the top-left corner of the rectangle.
+ * @param Y0 The Y-coordinate of the top-left corner of the rectangle.
+ * @param X1 The X-coordinate of the bottom-right corner of the rectangle.
+ * @param Y1 The Y-coordinate of the bottom-right corner of the rectangle.
+ * @param color The color of the rectangle.
+ */
 void ILI9341_DrawHollowRectangleCoord(uint16_t X0, uint16_t Y0, uint16_t X1, uint16_t Y1, uint16_t color)
 {
 	uint16_t xLen = 0;
@@ -134,6 +149,14 @@ void ILI9341_DrawHollowRectangleCoord(uint16_t X0, uint16_t Y0, uint16_t X1, uin
 	}
 }
 
+/**
+ * @brief Draws a filled rectangle on the ILI9341 display using coordinate values.
+ * @param X0 The X-coordinate of the top-left corner of the rectangle.
+ * @param Y0 The Y-coordinate of the top-left corner of the rectangle.
+ * @param X1 The X-coordinate of the bottom-right corner of the rectangle.
+ * @param Y1 The Y-coordinate of the bottom-right corner of the rectangle.
+ * @param color The color of the rectangle.
+ */
 void ILI9341_DrawFilledRectangleCoord(uint16_t X0, uint16_t Y0, uint16_t X1, uint16_t Y1, uint16_t color)
 {
 	uint16_t xLen = 0;
@@ -176,6 +199,15 @@ void ILI9341_DrawFilledRectangleCoord(uint16_t X0, uint16_t Y0, uint16_t X1, uin
 	ILI9341_DrawRectangle(X0True, Y0True, xLen, yLen, color);
 }
 
+/**
+ * @brief Draws a character on the ILI9341 display.
+ * @param ch The character to draw.
+ * @param font Pointer to the font data.
+ * @param X The X-coordinate of the top-left corner of the character.
+ * @param Y The Y-coordinate of the top-left corner of the character.
+ * @param color The color of the character.
+ * @param bgcolor The background color behind the character.
+ */
 void ILI9341_DrawChar(char ch, const uint8_t font[], uint16_t X, uint16_t Y, uint16_t color, uint16_t bgcolor)
 {
 	if ((ch < 31) || (ch > 127)) return;
@@ -207,6 +239,15 @@ void ILI9341_DrawChar(char ch, const uint8_t font[], uint16_t X, uint16_t Y, uin
 	}
 }
 
+/**
+ * @brief Draws a text string on the ILI9341 display.
+ * @param str The text string to draw.
+ * @param font Pointer to the font data.
+ * @param X The X-coordinate of the top-left corner of the text string.
+ * @param Y The Y-coordinate of the top-left corner of the text string.
+ * @param color The color of the text string.
+ * @param bgcolor The background color behind the text string.
+ */
 void ILI9341_DrawText(const char* str, const uint8_t font[], uint16_t X, uint16_t Y, uint16_t color, uint16_t bgcolor)
 {
 	uint8_t charWidth;			/* Width of character */
@@ -235,6 +276,11 @@ void ILI9341_DrawText(const char* str, const uint8_t font[], uint16_t X, uint16_
 	}
 }
 
+/**
+ * @brief Draws an image on the ILI9341 display.
+ * @param image Pointer to the image data.
+ * @param orientation The orientation of the image.
+ */
 void ILI9341_DrawImage(const uint8_t* image, uint8_t orientation)
 {
 	if(orientation == SCREEN_HORIZONTAL_1)

@@ -1,10 +1,11 @@
-/*
- * ILI9341_STM32_Driver.c
+/**
+ * @file ILI9341_STM32_Driver.c
  *
- *  Created on: May 5, 2023
- *      Author: leoau
+ * @brief This file contains the definition of all the ILI9341 Driver function
+ *
+ * @date 11 mai 2023
+ * @author leoau
  */
-
 #include "ILI9341_STM32_Driver.h"
 
 volatile uint16_t LCD_HEIGHT = ILI9341_SCREEN_HEIGHT;

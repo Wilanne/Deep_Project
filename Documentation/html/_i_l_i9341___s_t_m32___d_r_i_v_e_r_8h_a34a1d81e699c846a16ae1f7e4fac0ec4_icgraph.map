@@ -1,0 +1,7 @@
+<map id="ILI9341_Reset" name="ILI9341_Reset">
+<area shape="rect" id="node1" title=" " alt="" coords="425,31,529,57"/>
+<area shape="rect" id="node2" href="$_i_l_i9341___s_t_m32___driver_8c.html#ad5cdca394aae512e37176b6a30332a68" title=" " alt="" coords="291,31,377,57"/>
+<area shape="rect" id="node3" href="$_pixel_art_8c.html#a4ec3ff275a748bfd20f615c277be6ed9" title="Initialize the screen for PixelArt." alt="" coords="107,5,239,32"/>
+<area shape="rect" id="node5" href="$_pixel_art_8c.html#ad8f2bda4936099d7883d5fb888fb44ad" title="Perform a screen test by filling the screen with a color and displaying text." alt="" coords="103,56,243,83"/>
+<area shape="rect" id="node4" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,5,55,32"/>
+</map>

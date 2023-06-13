@@ -1,0 +1,5 @@
+PixelArt.c:16:6:PixelArt_InitScreen	8	static
+PixelArt.c:29:6:PixelArt_DrawGrid	40	static
+PixelArt.c:83:6:PixelArt_DrawCharacter	48	static
+PixelArt.c:122:6:PixelArt_AnimeCharacter	176	static
+PixelArt.c:132:6:PixelArt_ScreenTest	16	static

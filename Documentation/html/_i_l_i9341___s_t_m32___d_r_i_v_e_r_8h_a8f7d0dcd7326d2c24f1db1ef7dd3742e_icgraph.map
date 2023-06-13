@@ -1,0 +1,10 @@
+<map id="ILI9341_WriteData" name="ILI9341_WriteData">
+<area shape="rect" id="node1" title=" " alt="" coords="658,56,785,83"/>
+<area shape="rect" id="node2" href="$_i_l_i9341___s_t_m32___driver_8c.html#ad5cdca394aae512e37176b6a30332a68" title=" " alt="" coords="315,5,401,32"/>
+<area shape="rect" id="node6" href="$_i_l_i9341___s_t_m32___driver_8c.html#a2e8d50aa82cced7b5bcda6762629692b" title=" " alt="" coords="472,81,610,108"/>
+<area shape="rect" id="node3" href="$_pixel_art_8c.html#a4ec3ff275a748bfd20f615c277be6ed9" title="Initialize the screen for PixelArt." alt="" coords="107,95,239,121"/>
+<area shape="rect" id="node5" href="$_pixel_art_8c.html#ad8f2bda4936099d7883d5fb888fb44ad" title="Perform a screen test by filling the screen with a color and displaying text." alt="" coords="103,19,243,45"/>
+<area shape="rect" id="node4" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,95,55,121"/>
+<area shape="rect" id="node7" href="$_i_l_i9341___g_f_x_8c.html#a2d9ee49f127dc7cb4c8d8df77bcd4acb" title="Draws an image on the ILI9341 display." alt="" coords="291,157,424,184"/>
+<area shape="rect" id="node8" href="$_pixel_art_8c.html#a16d70057ada8d7853a30c848238fd055" title="Draw a grid on the screen." alt="" coords="294,208,421,235"/>
+</map>

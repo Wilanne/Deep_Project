@@ -1,0 +1,5 @@
+<map id="PixelArt_DrawCharacter" name="PixelArt_DrawCharacter">
+<area shape="rect" id="node1" title="Draw a character on the screen." alt="" coords="318,5,477,32"/>
+<area shape="rect" id="node2" href="$_pixel_art_8c.html#ab1502f1ce9060ce7748d17ddd67bb760" title="Animate a sequence of characters on the screen." alt="" coords="103,5,270,32"/>
+<area shape="rect" id="node3" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,5,55,32"/>
+</map>

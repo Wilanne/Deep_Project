@@ -1,0 +1,7 @@
+ILI9341_GFX.c:20:6:ILI9341_DrawHollowCircle	48	static
+ILI9341_GFX.c:62:6:ILI9341_DrawFilledCircle	56	static
+ILI9341_GFX.c:106:6:ILI9341_DrawHollowRectangleCoord	40	static
+ILI9341_GFX.c:160:6:ILI9341_DrawFilledRectangleCoord	48	static
+ILI9341_GFX.c:211:6:ILI9341_DrawChar	64	static
+ILI9341_GFX.c:251:6:ILI9341_DrawText	48	static
+ILI9341_GFX.c:284:6:ILI9341_DrawImage	24	static

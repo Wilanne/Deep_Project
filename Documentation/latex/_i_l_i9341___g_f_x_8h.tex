@@ -1,0 +1,599 @@
+\hypertarget{_i_l_i9341___g_f_x_8h}{}\doxysection{Core/\+Inc/\+ILI9341\+\_\+\+GFX.h File Reference}
+\label{_i_l_i9341___g_f_x_8h}\index{Core/Inc/ILI9341\_GFX.h@{Core/Inc/ILI9341\_GFX.h}}
+{\ttfamily \#include \char`\"{}stm32f1xx\+\_\+hal.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fonts.\+h\char`\"{}}\newline
+Include dependency graph for ILI9341\+\_\+\+GFX.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{_i_l_i9341___g_f_x_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_i_l_i9341___g_f_x_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_i_l_i9341___g_f_x_8h_aa482c5a61f58f9b376fc7d408a91a3c3}{HORIZONTAL\+\_\+\+IMAGE}}~0
+\item 
+\#define \mbox{\hyperlink{_i_l_i9341___g_f_x_8h_ad6918751f958a5ee563dd4ff4e071b48}{VERTICAL\+\_\+\+IMAGE}}~1
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_i_l_i9341___g_f_x_8h_ad13c01eb4ed64b1466288dcb817939ae}{ILI9341\+\_\+\+Draw\+Hollow\+Circle}} (uint16\+\_\+t X, uint16\+\_\+t Y, uint16\+\_\+t radius, uint16\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em Draws a hollow circle on the ILI9341 display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_i_l_i9341___g_f_x_8h_ac9f0ddd8eff4e75f3747ccd7fc0c4e53}{ILI9341\+\_\+\+Draw\+Filled\+Circle}} (uint16\+\_\+t X, uint16\+\_\+t Y, uint16\+\_\+t radius, uint16\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em Draws a filled circle on the ILI9341 display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_i_l_i9341___g_f_x_8h_a0f3dca5eb8e869401126ac37c40feb96}{ILI9341\+\_\+\+Draw\+Hollow\+Rectangle\+Coord}} (uint16\+\_\+t X0, uint16\+\_\+t Y0, uint16\+\_\+t X1, uint16\+\_\+t Y1, uint16\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em Draws a hollow rectangle on the ILI9341 display using coordinate values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_i_l_i9341___g_f_x_8h_a5a03b6a087c9dab0d183311980c0fc08}{ILI9341\+\_\+\+Draw\+Filled\+Rectangle\+Coord}} (uint16\+\_\+t X0, uint16\+\_\+t Y0, uint16\+\_\+t X1, uint16\+\_\+t Y1, uint16\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em Draws a filled rectangle on the ILI9341 display using coordinate values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_i_l_i9341___g_f_x_8h_a0bacfeb8d032f6addc1152a651a4c7c8}{ILI9341\+\_\+\+Draw\+Char}} (char ch, const uint8\+\_\+t font\mbox{[}$\,$\mbox{]}, uint16\+\_\+t X, uint16\+\_\+t Y, uint16\+\_\+t color, uint16\+\_\+t bgcolor)
+\begin{DoxyCompactList}\small\item\em Draws a character on the ILI9341 display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_i_l_i9341___g_f_x_8h_aba070ae5cadf0f3c0574cefd1c4e9fec}{ILI9341\+\_\+\+Draw\+Text}} (const char $\ast$str, const uint8\+\_\+t font\mbox{[}$\,$\mbox{]}, uint16\+\_\+t X, uint16\+\_\+t Y, uint16\+\_\+t color, uint16\+\_\+t bgcolor)
+\begin{DoxyCompactList}\small\item\em Draws a text string on the ILI9341 display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_i_l_i9341___g_f_x_8h_a2d9ee49f127dc7cb4c8d8df77bcd4acb}{ILI9341\+\_\+\+Draw\+Image}} (const uint8\+\_\+t $\ast$image, uint8\+\_\+t orientation)
+\begin{DoxyCompactList}\small\item\em Draws an image on the ILI9341 display. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_i_l_i9341___g_f_x_8h_aa482c5a61f58f9b376fc7d408a91a3c3}\label{_i_l_i9341___g_f_x_8h_aa482c5a61f58f9b376fc7d408a91a3c3}} 
+\index{ILI9341\_GFX.h@{ILI9341\_GFX.h}!HORIZONTAL\_IMAGE@{HORIZONTAL\_IMAGE}}
+\index{HORIZONTAL\_IMAGE@{HORIZONTAL\_IMAGE}!ILI9341\_GFX.h@{ILI9341\_GFX.h}}
+\doxysubsubsection{\texorpdfstring{HORIZONTAL\_IMAGE}{HORIZONTAL\_IMAGE}}
+{\footnotesize\ttfamily \#define HORIZONTAL\+\_\+\+IMAGE~0}
+
+
+
+Definition at line \mbox{\hyperlink{_i_l_i9341___g_f_x_8h_source_l00014}{14}} of file \mbox{\hyperlink{_i_l_i9341___g_f_x_8h_source}{ILI9341\+\_\+\+GFX.\+h}}.
+
+\mbox{\Hypertarget{_i_l_i9341___g_f_x_8h_ad6918751f958a5ee563dd4ff4e071b48}\label{_i_l_i9341___g_f_x_8h_ad6918751f958a5ee563dd4ff4e071b48}} 
+\index{ILI9341\_GFX.h@{ILI9341\_GFX.h}!VERTICAL\_IMAGE@{VERTICAL\_IMAGE}}
+\index{VERTICAL\_IMAGE@{VERTICAL\_IMAGE}!ILI9341\_GFX.h@{ILI9341\_GFX.h}}
+\doxysubsubsection{\texorpdfstring{VERTICAL\_IMAGE}{VERTICAL\_IMAGE}}
+{\footnotesize\ttfamily \#define VERTICAL\+\_\+\+IMAGE~1}
+
+
+
+Definition at line \mbox{\hyperlink{_i_l_i9341___g_f_x_8h_source_l00015}{15}} of file \mbox{\hyperlink{_i_l_i9341___g_f_x_8h_source}{ILI9341\+\_\+\+GFX.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_i_l_i9341___g_f_x_8h_a0bacfeb8d032f6addc1152a651a4c7c8}\label{_i_l_i9341___g_f_x_8h_a0bacfeb8d032f6addc1152a651a4c7c8}} 
+\index{ILI9341\_GFX.h@{ILI9341\_GFX.h}!ILI9341\_DrawChar@{ILI9341\_DrawChar}}
+\index{ILI9341\_DrawChar@{ILI9341\_DrawChar}!ILI9341\_GFX.h@{ILI9341\_GFX.h}}
+\doxysubsubsection{\texorpdfstring{ILI9341\_DrawChar()}{ILI9341\_DrawChar()}}
+{\footnotesize\ttfamily void ILI9341\+\_\+\+Draw\+Char (\begin{DoxyParamCaption}\item[{char}]{ch,  }\item[{const uint8\+\_\+t}]{font\mbox{[}$\,$\mbox{]},  }\item[{uint16\+\_\+t}]{X,  }\item[{uint16\+\_\+t}]{Y,  }\item[{uint16\+\_\+t}]{color,  }\item[{uint16\+\_\+t}]{bgcolor }\end{DoxyParamCaption})}
+
+
+
+Draws a character on the ILI9341 display. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ch} & The character to draw. \\
+\hline
+{\em font} & Pointer to the font data. \\
+\hline
+{\em X} & The X-\/coordinate of the top-\/left corner of the character. \\
+\hline
+{\em Y} & The Y-\/coordinate of the top-\/left corner of the character. \\
+\hline
+{\em color} & The color of the character. \\
+\hline
+{\em bgcolor} & The background color behind the character. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_i_l_i9341___g_f_x_8c_source_l00211}{211}} of file \mbox{\hyperlink{_i_l_i9341___g_f_x_8c_source}{ILI9341\+\_\+\+GFX.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00212\ \{}
+\DoxyCodeLine{00213\ \ \ \ \ \textcolor{keywordflow}{if}\ ((ch\ <\ 31)\ ||\ (ch\ >\ 127))\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00214\ }
+\DoxyCodeLine{00215\ \ \ \ \ uint8\_t\ fOffset,\ fWidth,\ fHeight,\ fBPL;}
+\DoxyCodeLine{00216\ \ \ \ \ uint8\_t\ *tempChar;}
+\DoxyCodeLine{00217\ }
+\DoxyCodeLine{00218\ \ \ \ \ fOffset\ =\ font[0];}
+\DoxyCodeLine{00219\ \ \ \ \ fWidth\ =\ font[1];}
+\DoxyCodeLine{00220\ \ \ \ \ fHeight\ =\ font[2];}
+\DoxyCodeLine{00221\ \ \ \ \ fBPL\ =\ font[3];}
+\DoxyCodeLine{00222\ }
+\DoxyCodeLine{00223\ \ \ \ \ tempChar\ =\ (uint8\_t*)\&font[((ch\ -\/\ 0x20)\ *\ fOffset)\ +\ 4];\ \textcolor{comment}{/*\ Current\ Character\ =\ Meta\ +\ (Character\ Index\ *\ Offset)\ */}}
+\DoxyCodeLine{00224\ }
+\DoxyCodeLine{00225\ \ \ \ \ \textcolor{comment}{/*\ Clear\ background\ first\ */}}
+\DoxyCodeLine{00226\ \ \ \ \ \mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a2042a95e96a3de63fc361cdbdaec7eb3}{ILI9341\_DrawRectangle}}(X,\ Y,\ fWidth,\ fHeight,\ bgcolor);}
+\DoxyCodeLine{00227\ }
+\DoxyCodeLine{00228\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j=0;\ j\ <\ fHeight;\ j++)}
+\DoxyCodeLine{00229\ \ \ \ \ \{}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=0;\ i\ <\ fWidth;\ i++)}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ z\ =\ \ tempChar[fBPL\ *\ i\ +\ ((j\ \&\ 0xF8)\ >>\ 3)\ +\ 1];\ \textcolor{comment}{/*\ (j\ \&\ 0xF8)\ >>\ 3,\ increase\ one\ by\ 8-\/bits\ */}}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ b\ =\ 1\ <<\ (j\ \&\ 0x07);}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((\ z\ \&\ b\ )\ !=\ 0x00)}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a691f1e59bdcce40b8307538de50c35a0}{ILI9341\_DrawPixel}}(X+i,\ Y+j,\ color);}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00239\ \ \ \ \ \}}
+\DoxyCodeLine{00240\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_i_l_i9341___g_f_x_8h_a0bacfeb8d032f6addc1152a651a4c7c8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_i_l_i9341___g_f_x_8h_a0bacfeb8d032f6addc1152a651a4c7c8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_i_l_i9341___g_f_x_8h_ac9f0ddd8eff4e75f3747ccd7fc0c4e53}\label{_i_l_i9341___g_f_x_8h_ac9f0ddd8eff4e75f3747ccd7fc0c4e53}} 
+\index{ILI9341\_GFX.h@{ILI9341\_GFX.h}!ILI9341\_DrawFilledCircle@{ILI9341\_DrawFilledCircle}}
+\index{ILI9341\_DrawFilledCircle@{ILI9341\_DrawFilledCircle}!ILI9341\_GFX.h@{ILI9341\_GFX.h}}
+\doxysubsubsection{\texorpdfstring{ILI9341\_DrawFilledCircle()}{ILI9341\_DrawFilledCircle()}}
+{\footnotesize\ttfamily void ILI9341\+\_\+\+Draw\+Filled\+Circle (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{X,  }\item[{uint16\+\_\+t}]{Y,  }\item[{uint16\+\_\+t}]{radius,  }\item[{uint16\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+
+
+Draws a filled circle on the ILI9341 display. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & The X-\/coordinate of the center of the circle. \\
+\hline
+{\em Y} & The Y-\/coordinate of the center of the circle. \\
+\hline
+{\em radius} & The radius of the circle. \\
+\hline
+{\em color} & The color of the circle. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_i_l_i9341___g_f_x_8c_source_l00062}{62}} of file \mbox{\hyperlink{_i_l_i9341___g_f_x_8c_source}{ILI9341\+\_\+\+GFX.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00063\ \{}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{int}\ x\ =\ radius;}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{int}\ y\ =\ 0;}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{int}\ xChange\ =\ 1\ -\/\ (radius\ <<\ 1);}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{int}\ yChange\ =\ 0;}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{int}\ radiusError\ =\ 0;}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordflow}{while}\ (x\ >=\ y)}
+\DoxyCodeLine{00072\ \ \ \ \ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ X\ -\/\ x;\ i\ <=\ X\ +\ x;\ i++)}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a691f1e59bdcce40b8307538de50c35a0}{ILI9341\_DrawPixel}}(i,\ Y\ +\ y,color);}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a691f1e59bdcce40b8307538de50c35a0}{ILI9341\_DrawPixel}}(i,\ Y\ -\/\ y,color);}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ X\ -\/\ y;\ i\ <=\ X\ +\ y;\ i++)}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a691f1e59bdcce40b8307538de50c35a0}{ILI9341\_DrawPixel}}(i,\ Y\ +\ x,color);}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a691f1e59bdcce40b8307538de50c35a0}{ILI9341\_DrawPixel}}(i,\ Y\ -\/\ x,color);}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ y++;}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ radiusError\ +=\ yChange;}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ yChange\ +=\ 2;}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (((radiusError\ <<\ 1)\ +\ xChange)\ >\ 0)}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ x-\/-\/;}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ radiusError\ +=\ xChange;}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ xChange\ +=\ 2;}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00095\ \ \ \ \ \}}
+\DoxyCodeLine{00096\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_i_l_i9341___g_f_x_8h_ac9f0ddd8eff4e75f3747ccd7fc0c4e53_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_i_l_i9341___g_f_x_8h_a5a03b6a087c9dab0d183311980c0fc08}\label{_i_l_i9341___g_f_x_8h_a5a03b6a087c9dab0d183311980c0fc08}} 
+\index{ILI9341\_GFX.h@{ILI9341\_GFX.h}!ILI9341\_DrawFilledRectangleCoord@{ILI9341\_DrawFilledRectangleCoord}}
+\index{ILI9341\_DrawFilledRectangleCoord@{ILI9341\_DrawFilledRectangleCoord}!ILI9341\_GFX.h@{ILI9341\_GFX.h}}
+\doxysubsubsection{\texorpdfstring{ILI9341\_DrawFilledRectangleCoord()}{ILI9341\_DrawFilledRectangleCoord()}}
+{\footnotesize\ttfamily void ILI9341\+\_\+\+Draw\+Filled\+Rectangle\+Coord (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{X0,  }\item[{uint16\+\_\+t}]{Y0,  }\item[{uint16\+\_\+t}]{X1,  }\item[{uint16\+\_\+t}]{Y1,  }\item[{uint16\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+
+
+Draws a filled rectangle on the ILI9341 display using coordinate values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X0} & The X-\/coordinate of the top-\/left corner of the rectangle. \\
+\hline
+{\em Y0} & The Y-\/coordinate of the top-\/left corner of the rectangle. \\
+\hline
+{\em X1} & The X-\/coordinate of the bottom-\/right corner of the rectangle. \\
+\hline
+{\em Y1} & The Y-\/coordinate of the bottom-\/right corner of the rectangle. \\
+\hline
+{\em color} & The color of the rectangle. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_i_l_i9341___g_f_x_8c_source_l00160}{160}} of file \mbox{\hyperlink{_i_l_i9341___g_f_x_8c_source}{ILI9341\+\_\+\+GFX.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00161\ \{}
+\DoxyCodeLine{00162\ \ \ \ \ uint16\_t\ xLen\ =\ 0;}
+\DoxyCodeLine{00163\ \ \ \ \ uint16\_t\ yLen\ =\ 0;}
+\DoxyCodeLine{00164\ \ \ \ \ uint8\_t\ negX\ =\ 0;}
+\DoxyCodeLine{00165\ \ \ \ \ uint8\_t\ negY\ =\ 0;}
+\DoxyCodeLine{00166\ \ \ \ \ int32\_t\ negCalc\ =\ 0;}
+\DoxyCodeLine{00167\ \ \ \ \ uint16\_t\ X0True\ =\ 0;}
+\DoxyCodeLine{00168\ \ \ \ \ uint16\_t\ Y0True\ =\ 0;}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00170\ \ \ \ \ negCalc\ =\ X1\ -\/\ X0;}
+\DoxyCodeLine{00171\ \ \ \ \ \textcolor{keywordflow}{if}(negCalc\ <\ 0)\ negX\ =\ 1;}
+\DoxyCodeLine{00172\ \ \ \ \ negCalc\ =\ 0;}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00174\ \ \ \ \ negCalc\ =\ Y1\ -\/\ Y0;}
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keywordflow}{if}(negCalc\ <\ 0)\ negY\ =\ 1;}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{keywordflow}{if}(!negX)}
+\DoxyCodeLine{00178\ \ \ \ \ \{}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ xLen\ =\ X1\ -\/\ X0;}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ X0True\ =\ X0;}
+\DoxyCodeLine{00181\ \ \ \ \ \}}
+\DoxyCodeLine{00182\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00183\ \ \ \ \ \{}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ xLen\ =\ X0\ -\/\ X1;}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ X0True\ =\ X1;}
+\DoxyCodeLine{00186\ \ \ \ \ \}}
+\DoxyCodeLine{00187\ }
+\DoxyCodeLine{00188\ \ \ \ \ \textcolor{keywordflow}{if}(!negY)}
+\DoxyCodeLine{00189\ \ \ \ \ \{}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ yLen\ =\ Y1\ -\/\ Y0;}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ Y0True\ =\ Y0;}
+\DoxyCodeLine{00192\ \ \ \ \ \}}
+\DoxyCodeLine{00193\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00194\ \ \ \ \ \{}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ yLen\ =\ Y0\ -\/\ Y1;}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ Y0True\ =\ Y1;}
+\DoxyCodeLine{00197\ \ \ \ \ \}}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00199\ \ \ \ \ \mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a2042a95e96a3de63fc361cdbdaec7eb3}{ILI9341\_DrawRectangle}}(X0True,\ Y0True,\ xLen,\ yLen,\ color);}
+\DoxyCodeLine{00200\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_i_l_i9341___g_f_x_8h_a5a03b6a087c9dab0d183311980c0fc08_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_i_l_i9341___g_f_x_8h_a5a03b6a087c9dab0d183311980c0fc08_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_i_l_i9341___g_f_x_8h_ad13c01eb4ed64b1466288dcb817939ae}\label{_i_l_i9341___g_f_x_8h_ad13c01eb4ed64b1466288dcb817939ae}} 
+\index{ILI9341\_GFX.h@{ILI9341\_GFX.h}!ILI9341\_DrawHollowCircle@{ILI9341\_DrawHollowCircle}}
+\index{ILI9341\_DrawHollowCircle@{ILI9341\_DrawHollowCircle}!ILI9341\_GFX.h@{ILI9341\_GFX.h}}
+\doxysubsubsection{\texorpdfstring{ILI9341\_DrawHollowCircle()}{ILI9341\_DrawHollowCircle()}}
+{\footnotesize\ttfamily void ILI9341\+\_\+\+Draw\+Hollow\+Circle (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{X,  }\item[{uint16\+\_\+t}]{Y,  }\item[{uint16\+\_\+t}]{radius,  }\item[{uint16\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+
+
+Draws a hollow circle on the ILI9341 display. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & The X-\/coordinate of the center of the circle. \\
+\hline
+{\em Y} & The Y-\/coordinate of the center of the circle. \\
+\hline
+{\em radius} & The radius of the circle. \\
+\hline
+{\em color} & The color of the circle. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_i_l_i9341___g_f_x_8c_source_l00020}{20}} of file \mbox{\hyperlink{_i_l_i9341___g_f_x_8c_source}{ILI9341\+\_\+\+GFX.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{int}\ x\ =\ radius-\/1;}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{int}\ y\ =\ 0;}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{int}\ dx\ =\ 1;}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{int}\ dy\ =\ 1;}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{int}\ err\ =\ dx\ -\/\ (radius\ <<\ 1);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordflow}{while}\ (x\ >=\ y)}
+\DoxyCodeLine{00029\ \ \ \ \ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a691f1e59bdcce40b8307538de50c35a0}{ILI9341\_DrawPixel}}(X\ +\ x,\ Y\ +\ y,\ color);}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a691f1e59bdcce40b8307538de50c35a0}{ILI9341\_DrawPixel}}(X\ +\ y,\ Y\ +\ x,\ color);}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a691f1e59bdcce40b8307538de50c35a0}{ILI9341\_DrawPixel}}(X\ -\/\ y,\ Y\ +\ x,\ color);}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a691f1e59bdcce40b8307538de50c35a0}{ILI9341\_DrawPixel}}(X\ -\/\ x,\ Y\ +\ y,\ color);}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a691f1e59bdcce40b8307538de50c35a0}{ILI9341\_DrawPixel}}(X\ -\/\ x,\ Y\ -\/\ y,\ color);}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a691f1e59bdcce40b8307538de50c35a0}{ILI9341\_DrawPixel}}(X\ -\/\ y,\ Y\ -\/\ x,\ color);}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a691f1e59bdcce40b8307538de50c35a0}{ILI9341\_DrawPixel}}(X\ +\ y,\ Y\ -\/\ x,\ color);}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a691f1e59bdcce40b8307538de50c35a0}{ILI9341\_DrawPixel}}(X\ +\ x,\ Y\ -\/\ y,\ color);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (err\ <=\ 0)}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ y++;}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ err\ +=\ dy;}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ dy\ +=\ 2;}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (err\ >\ 0)}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ x-\/-\/;}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ dx\ +=\ 2;}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ err\ +=\ (-\/radius\ <<\ 1)\ +\ dx;}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00052\ \ \ \ \ \}}
+\DoxyCodeLine{00053\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_i_l_i9341___g_f_x_8h_ad13c01eb4ed64b1466288dcb817939ae_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_i_l_i9341___g_f_x_8h_a0f3dca5eb8e869401126ac37c40feb96}\label{_i_l_i9341___g_f_x_8h_a0f3dca5eb8e869401126ac37c40feb96}} 
+\index{ILI9341\_GFX.h@{ILI9341\_GFX.h}!ILI9341\_DrawHollowRectangleCoord@{ILI9341\_DrawHollowRectangleCoord}}
+\index{ILI9341\_DrawHollowRectangleCoord@{ILI9341\_DrawHollowRectangleCoord}!ILI9341\_GFX.h@{ILI9341\_GFX.h}}
+\doxysubsubsection{\texorpdfstring{ILI9341\_DrawHollowRectangleCoord()}{ILI9341\_DrawHollowRectangleCoord()}}
+{\footnotesize\ttfamily void ILI9341\+\_\+\+Draw\+Hollow\+Rectangle\+Coord (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{X0,  }\item[{uint16\+\_\+t}]{Y0,  }\item[{uint16\+\_\+t}]{X1,  }\item[{uint16\+\_\+t}]{Y1,  }\item[{uint16\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+
+
+Draws a hollow rectangle on the ILI9341 display using coordinate values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X0} & The X-\/coordinate of the top-\/left corner of the rectangle. \\
+\hline
+{\em Y0} & The Y-\/coordinate of the top-\/left corner of the rectangle. \\
+\hline
+{\em X1} & The X-\/coordinate of the bottom-\/right corner of the rectangle. \\
+\hline
+{\em Y1} & The Y-\/coordinate of the bottom-\/right corner of the rectangle. \\
+\hline
+{\em color} & The color of the rectangle. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_i_l_i9341___g_f_x_8c_source_l00106}{106}} of file \mbox{\hyperlink{_i_l_i9341___g_f_x_8c_source}{ILI9341\+\_\+\+GFX.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00107\ \{}
+\DoxyCodeLine{00108\ \ \ \ \ uint16\_t\ xLen\ =\ 0;}
+\DoxyCodeLine{00109\ \ \ \ \ uint16\_t\ yLen\ =\ 0;}
+\DoxyCodeLine{00110\ \ \ \ \ uint8\_t\ negX\ =\ 0;}
+\DoxyCodeLine{00111\ \ \ \ \ uint8\_t\ negY\ =\ 0;}
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{float}\ negCalc\ =\ 0;}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ \ \ negCalc\ =\ X1\ -\/\ X0;}
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordflow}{if}(negCalc\ <\ 0)\ negX\ =\ 1;}
+\DoxyCodeLine{00116\ \ \ \ \ negCalc\ =\ 0;}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \ \ \ \ negCalc\ =\ Y1\ -\/\ Y0;}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordflow}{if}(negCalc\ <\ 0)\ negY\ =\ 1;}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{comment}{//DRAW\ HORIZONTAL!}}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordflow}{if}(!negX)}
+\DoxyCodeLine{00123\ \ \ \ \ \{}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ xLen\ =\ X1\ -\/\ X0;}
+\DoxyCodeLine{00125\ \ \ \ \ \}}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00127\ \ \ \ \ \{}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ xLen\ =\ X0\ -\/\ X1;}
+\DoxyCodeLine{00129\ \ \ \ \ \}}
+\DoxyCodeLine{00130\ \ \ \ \ \mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a9ccb3fd050b072015a11a9e9e5a0e4d1}{ILI9341\_DrawHLine}}(X0,\ Y0,\ xLen,\ color);}
+\DoxyCodeLine{00131\ \ \ \ \ \mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a9ccb3fd050b072015a11a9e9e5a0e4d1}{ILI9341\_DrawHLine}}(X0,\ Y1,\ xLen,\ color);}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{comment}{//DRAW\ VERTICAL!}}
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordflow}{if}(!negY)}
+\DoxyCodeLine{00135\ \ \ \ \ \{}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ yLen\ =\ Y1\ -\/\ Y0;}
+\DoxyCodeLine{00137\ \ \ \ \ \}}
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00139\ \ \ \ \ \{}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ yLen\ =\ Y0\ -\/\ Y1;}
+\DoxyCodeLine{00141\ \ \ \ \ \}}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \ \ \ \ \mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_ae2356e95cb42f0250c717e115c09ead3}{ILI9341\_DrawVLine}}(X0,\ Y0,\ yLen,\ color);}
+\DoxyCodeLine{00144\ \ \ \ \ \mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_ae2356e95cb42f0250c717e115c09ead3}{ILI9341\_DrawVLine}}(X1,\ Y0,\ yLen,\ color);}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordflow}{if}((xLen\ >\ 0)||(yLen\ >\ 0))}
+\DoxyCodeLine{00147\ \ \ \ \ \{}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a691f1e59bdcce40b8307538de50c35a0}{ILI9341\_DrawPixel}}(X1,\ Y1,\ color);}
+\DoxyCodeLine{00149\ \ \ \ \ \}}
+\DoxyCodeLine{00150\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_i_l_i9341___g_f_x_8h_a0f3dca5eb8e869401126ac37c40feb96_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_i_l_i9341___g_f_x_8h_a2d9ee49f127dc7cb4c8d8df77bcd4acb}\label{_i_l_i9341___g_f_x_8h_a2d9ee49f127dc7cb4c8d8df77bcd4acb}} 
+\index{ILI9341\_GFX.h@{ILI9341\_GFX.h}!ILI9341\_DrawImage@{ILI9341\_DrawImage}}
+\index{ILI9341\_DrawImage@{ILI9341\_DrawImage}!ILI9341\_GFX.h@{ILI9341\_GFX.h}}
+\doxysubsubsection{\texorpdfstring{ILI9341\_DrawImage()}{ILI9341\_DrawImage()}}
+{\footnotesize\ttfamily void ILI9341\+\_\+\+Draw\+Image (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{image,  }\item[{uint8\+\_\+t}]{orientation }\end{DoxyParamCaption})}
+
+
+
+Draws an image on the ILI9341 display. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & Pointer to the image data. \\
+\hline
+{\em orientation} & The orientation of the image. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_i_l_i9341___g_f_x_8c_source_l00284}{284}} of file \mbox{\hyperlink{_i_l_i9341___g_f_x_8c_source}{ILI9341\+\_\+\+GFX.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00285\ \{}
+\DoxyCodeLine{00286\ \ \ \ \ \textcolor{keywordflow}{if}(orientation\ ==\ \mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a5045edc0c0a47ee499d597e8bf6a9852}{SCREEN\_HORIZONTAL\_1}})}
+\DoxyCodeLine{00287\ \ \ \ \ \{}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a2e8d50aa82cced7b5bcda6762629692b}{ILI9341\_SetRotation}}(\mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a5045edc0c0a47ee499d597e8bf6a9852}{SCREEN\_HORIZONTAL\_1}});}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a9b0cd3a0f195757e172d47d501a0b702}{ILI9341\_SetAddress}}(0,0,\mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_ab3097a8107773b0958e351b195d6fd28}{ILI9341\_SCREEN\_WIDTH}},\mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a750a9b79acd8b1bd45cc2d8b85c84444}{ILI9341\_SCREEN\_HEIGHT}});}
+\DoxyCodeLine{00290\ \ \ \ \ \}}
+\DoxyCodeLine{00291\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(orientation\ ==\ \mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a0af30c01b2937812cad5c3c3d0967264}{SCREEN\_HORIZONTAL\_2}})}
+\DoxyCodeLine{00292\ \ \ \ \ \{}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a2e8d50aa82cced7b5bcda6762629692b}{ILI9341\_SetRotation}}(\mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a0af30c01b2937812cad5c3c3d0967264}{SCREEN\_HORIZONTAL\_2}});}
+\DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a9b0cd3a0f195757e172d47d501a0b702}{ILI9341\_SetAddress}}(0,0,\mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_ab3097a8107773b0958e351b195d6fd28}{ILI9341\_SCREEN\_WIDTH}},\mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a750a9b79acd8b1bd45cc2d8b85c84444}{ILI9341\_SCREEN\_HEIGHT}});}
+\DoxyCodeLine{00295\ \ \ \ \ \}}
+\DoxyCodeLine{00296\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(orientation\ ==\ \mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_acbb87d6fba7f3108976f801b41685a51}{SCREEN\_VERTICAL\_2}})}
+\DoxyCodeLine{00297\ \ \ \ \ \{}
+\DoxyCodeLine{00298\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a2e8d50aa82cced7b5bcda6762629692b}{ILI9341\_SetRotation}}(\mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_acbb87d6fba7f3108976f801b41685a51}{SCREEN\_VERTICAL\_2}});}
+\DoxyCodeLine{00299\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a9b0cd3a0f195757e172d47d501a0b702}{ILI9341\_SetAddress}}(0,0,\mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a750a9b79acd8b1bd45cc2d8b85c84444}{ILI9341\_SCREEN\_HEIGHT}},\mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_ab3097a8107773b0958e351b195d6fd28}{ILI9341\_SCREEN\_WIDTH}});}
+\DoxyCodeLine{00300\ \ \ \ \ \}}
+\DoxyCodeLine{00301\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(orientation\ ==\ \mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_aaf354859347f5ee6496a961c0abf3c96}{SCREEN\_VERTICAL\_1}})}
+\DoxyCodeLine{00302\ \ \ \ \ \{}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a2e8d50aa82cced7b5bcda6762629692b}{ILI9341\_SetRotation}}(\mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_aaf354859347f5ee6496a961c0abf3c96}{SCREEN\_VERTICAL\_1}});}
+\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a9b0cd3a0f195757e172d47d501a0b702}{ILI9341\_SetAddress}}(0,0,\mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a750a9b79acd8b1bd45cc2d8b85c84444}{ILI9341\_SCREEN\_HEIGHT}},\mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_ab3097a8107773b0958e351b195d6fd28}{ILI9341\_SCREEN\_WIDTH}});}
+\DoxyCodeLine{00305\ \ \ \ \ \}}
+\DoxyCodeLine{00306\ }
+\DoxyCodeLine{00307\ \ \ \ \ uint32\_t\ counter\ =\ 0;}
+\DoxyCodeLine{00308\ \ \ \ \ \textcolor{keywordflow}{for}(uint32\_t\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_ab3097a8107773b0958e351b195d6fd28}{ILI9341\_SCREEN\_WIDTH}}*\mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_a750a9b79acd8b1bd45cc2d8b85c84444}{ILI9341\_SCREEN\_HEIGHT}}*2/\mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_ade48d89d14193c97e7b25bd385f6b4f2}{BURST\_MAX\_SIZE}};\ i++)}
+\DoxyCodeLine{00309\ \ \ \ \ \{}
+\DoxyCodeLine{00310\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_abf0b301d783c8dbcbcd4c1ac05e2fc3e}{ILI9341\_WriteBuffer}}((uint8\_t*)(image\ +\ counter),\ \mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_ade48d89d14193c97e7b25bd385f6b4f2}{BURST\_MAX\_SIZE}});}
+\DoxyCodeLine{00311\ \ \ \ \ \ \ \ \ counter\ +=\ \mbox{\hyperlink{_i_l_i9341___s_t_m32___d_r_i_v_e_r_8h_ade48d89d14193c97e7b25bd385f6b4f2}{BURST\_MAX\_SIZE}};}
+\DoxyCodeLine{00312\ }
+\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ DMA\ Tx\ is\ too\ fast,\ It\ needs\ some\ delay\ */}}
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ DelayUs(1);}
+\DoxyCodeLine{00315\ \ \ \ \ \}}
+\DoxyCodeLine{00316\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_i_l_i9341___g_f_x_8h_a2d9ee49f127dc7cb4c8d8df77bcd4acb_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_i_l_i9341___g_f_x_8h_aba070ae5cadf0f3c0574cefd1c4e9fec}\label{_i_l_i9341___g_f_x_8h_aba070ae5cadf0f3c0574cefd1c4e9fec}} 
+\index{ILI9341\_GFX.h@{ILI9341\_GFX.h}!ILI9341\_DrawText@{ILI9341\_DrawText}}
+\index{ILI9341\_DrawText@{ILI9341\_DrawText}!ILI9341\_GFX.h@{ILI9341\_GFX.h}}
+\doxysubsubsection{\texorpdfstring{ILI9341\_DrawText()}{ILI9341\_DrawText()}}
+{\footnotesize\ttfamily void ILI9341\+\_\+\+Draw\+Text (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str,  }\item[{const uint8\+\_\+t}]{font\mbox{[}$\,$\mbox{]},  }\item[{uint16\+\_\+t}]{X,  }\item[{uint16\+\_\+t}]{Y,  }\item[{uint16\+\_\+t}]{color,  }\item[{uint16\+\_\+t}]{bgcolor }\end{DoxyParamCaption})}
+
+
+
+Draws a text string on the ILI9341 display. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & The text string to draw. \\
+\hline
+{\em font} & Pointer to the font data. \\
+\hline
+{\em X} & The X-\/coordinate of the top-\/left corner of the text string. \\
+\hline
+{\em Y} & The Y-\/coordinate of the top-\/left corner of the text string. \\
+\hline
+{\em color} & The color of the text string. \\
+\hline
+{\em bgcolor} & The background color behind the text string. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_i_l_i9341___g_f_x_8c_source_l00251}{251}} of file \mbox{\hyperlink{_i_l_i9341___g_f_x_8c_source}{ILI9341\+\_\+\+GFX.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00252\ \{}
+\DoxyCodeLine{00253\ \ \ \ \ uint8\_t\ charWidth;\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Width\ of\ character\ */}}
+\DoxyCodeLine{00254\ \ \ \ \ uint8\_t\ fOffset\ =\ font[0];\ \ \textcolor{comment}{/*\ Offset\ of\ character\ */}}
+\DoxyCodeLine{00255\ \ \ \ \ uint8\_t\ fWidth\ =\ font[1];\ \ \ \textcolor{comment}{/*\ Width\ of\ font\ */}}
+\DoxyCodeLine{00256\ }
+\DoxyCodeLine{00257\ \ \ \ \ \textcolor{keywordflow}{while}\ (*str)}
+\DoxyCodeLine{00258\ \ \ \ \ \{}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_i_l_i9341___g_f_x_8c_a0bacfeb8d032f6addc1152a651a4c7c8}{ILI9341\_DrawChar}}(*str,\ font,\ X,\ Y,\ color,\ bgcolor);}
+\DoxyCodeLine{00260\ }
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Check\ character\ width\ and\ calculate\ proper\ position\ */}}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ uint8\_t\ *tempChar\ =\ (uint8\_t*)\&font[((*str\ -\/\ 0x20)\ *\ fOffset)\ +\ 4];}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ charWidth\ =\ tempChar[0];}
+\DoxyCodeLine{00264\ }
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(charWidth\ +\ 2\ <\ fWidth)}
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ If\ character\ width\ is\ smaller\ than\ font\ width\ */}}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \ \ \ \ X\ +=\ (charWidth\ +\ 2);}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \ \ \ \ X\ +=\ fWidth;}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00274\ }
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ str++;}
+\DoxyCodeLine{00276\ \ \ \ \ \}}
+\DoxyCodeLine{00277\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_i_l_i9341___g_f_x_8h_aba070ae5cadf0f3c0574cefd1c4e9fec_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{_i_l_i9341___g_f_x_8h_aba070ae5cadf0f3c0574cefd1c4e9fec_icgraph}
+\end{center}
+\end{figure}
